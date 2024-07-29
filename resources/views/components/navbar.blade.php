@@ -15,9 +15,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Lavora con noi</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">inserisci articolo</a>
-          </li>
+         
          @guest
           <li class="nav-item">
             <a class="nav-link" href="{{route('register')}}">Register</a>
@@ -29,6 +27,9 @@
           @endguest
 
           @auth
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('Article.create')}}">inserisci articolo</a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>

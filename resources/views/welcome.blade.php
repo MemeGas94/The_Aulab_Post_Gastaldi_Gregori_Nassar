@@ -24,7 +24,7 @@
                       <p class="card-text">{{$article->subtitle}}</p>
                       <p class="card-text">{{$article->description}}</p>
                       <a href="{{route('Article.show', $article)}}" class="btn btn-primary">Mostra articolo completo</a>
-                      <a href="{{route('Article.byCategory', $article->category)}}" class="btn btn-primary">{{$article->category->name}}</a>
+                      <a href="{{ route('Article.byCategory', $article->category) }}" class="btn btn-primary">{{ $article->category->name }}</a>
                       <a href="{{route('Article.byUser', $article->user)}}" class="btn btn-primary">{{$article->user->name}}</a>
 
                     </div>

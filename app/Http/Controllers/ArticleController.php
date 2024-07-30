@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -32,5 +33,18 @@ class ArticleController extends Controller
         return view ('Article.index', compact('articles'));
     }
 
+    public function show(Article $article){
 
+        return view ('Article.show', compact('article'));
+    }
+
+    public function byCategory(Category $category){
+        $articles=$category->articles()->orderBy('created_at','desc')->get();
+        return view ('Article.byCategory', compact('category','articles'));
+    }
+
+    public function byUser(User $user){
+        $articles=$user->articles()->orderBy('created_at','desc')->get();
+        return view ('Article.byUser', compact('user','articles'));
+    }
 }

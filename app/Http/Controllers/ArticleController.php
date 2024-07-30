@@ -21,7 +21,7 @@ class ArticleController extends Controller
             'subtitle'=>$request->subtitle,
             'description'=>$request->description,
             'category_id'=>$request->category,
-            'cover'=>$request->cover,
+            'cover'=>$request->file('cover')->store('public/images'),
             'user_id'=>Auth::user()->id,
         ]);
        return redirect(route('homepage'))->with('session','Articolo creato con successo');

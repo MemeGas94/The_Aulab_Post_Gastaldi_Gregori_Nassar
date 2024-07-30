@@ -15,10 +15,18 @@
             <label for="description" class="form-label">Corpo del testo</label>
             <input type="text" class="form-control" id="description" name="description">
           </div>
+
           <div class="mb-3">
-            <label for="category" class="form-label">Categoria</label>
-            <input type="text" class="form-control" id="category" name="category">
+            <select class="form-select"  id="category_id"  name="category" aria-label="Default select example">
+              <option selected>Scegli una categoria</option>
+              @foreach ($categories as $category)
+              <option value="{{$category->id}}">{{$category->name}}</option>
+              @endforeach
+
+    
+            </select>
           </div>
+
           <div class="mb-3">
             <label for="cover" class="form-label">Copertina</label>
             <input type="file" class="form-control" id="cover" name="cover">

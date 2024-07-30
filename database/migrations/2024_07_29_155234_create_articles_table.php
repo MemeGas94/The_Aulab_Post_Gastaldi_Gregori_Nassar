@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('subtitle');
             $table->string('description');
-            $table->string('category');
             $table->string('cover');
             $table->timestamps();
         });
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('article');
+        Schema::dropIfExists('articles');
     }
 };

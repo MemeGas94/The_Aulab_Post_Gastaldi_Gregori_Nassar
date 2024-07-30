@@ -12,8 +12,8 @@
           <input type="text" class="form-control" id="subtitle" name="subtitle">
         </div>
         <div class="mb-3">
-            <label for="description" class="form-label">Corpo del testo</label>
-            <input type="text" class="form-control" id="description" name="description">
+            <label for="description" class="form-label">Descrizione</label>
+            <textarea type="text" class="form-control" id="description" name="description"></textarea>
           </div>
 
           <div class="mb-3">

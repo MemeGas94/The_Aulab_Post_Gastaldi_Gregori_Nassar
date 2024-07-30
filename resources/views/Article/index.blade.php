@@ -1,16 +1,6 @@
 <x-layout>
 
-<h1>ciao</h1>
-
-@if (session('session'))
-
-<div class="alert alert-success">
-    {{('Articolo creato con successo')}}
-</div>
-    
-@endif
-
-
+<h1>Ultimi articoli aggiornati</h1>
 
 <section class="container">
     <div class="row">
@@ -31,4 +21,9 @@
         @endforeach
     </div>
 </section>
+
+
+
+
+
 </x-layout>

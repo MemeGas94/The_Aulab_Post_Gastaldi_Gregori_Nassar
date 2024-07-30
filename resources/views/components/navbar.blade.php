@@ -10,7 +10,7 @@
             <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Ultime Notizie</a>
+            <a class="nav-link" href="{{route('Article.index')}}">Ultime Articoli</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Lavora con noi</a>

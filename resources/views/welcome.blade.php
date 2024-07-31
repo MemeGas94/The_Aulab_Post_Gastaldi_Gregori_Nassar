@@ -15,6 +15,14 @@
     
 @endif
 
+@if (session('sessionn'))
+
+<div class="alert alert-success">
+    {{('mail inviata con successo')}}
+</div>
+    
+@endif
+
 
 
 <section class="container">

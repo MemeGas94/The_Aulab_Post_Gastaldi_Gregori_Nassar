@@ -15,4 +15,12 @@ class PublicController extends Controller
     public function career(){
         return view('careerpage');
     }
+
+    public function postcareer(Request $request){
+        $request->validate([
+            'email'=>'required',
+            'role'=>'required',
+            'messagge-presentation'=>'required',
+        ]);
+    }
 }

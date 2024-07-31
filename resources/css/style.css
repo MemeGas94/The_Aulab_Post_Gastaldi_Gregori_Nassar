@@ -1,5 +1,5 @@
 body{
-    background-color: #c5c4ff;
+    background-color: rgb(230, 230, 230);
 }
 h1{
     color:aqua;
@@ -152,4 +152,8 @@ h1{
   
   .button:hover::before {
     opacity: 1;
+  }
+
+  .navbar{
+   background-color : rgb(160, 128, 108);
   }

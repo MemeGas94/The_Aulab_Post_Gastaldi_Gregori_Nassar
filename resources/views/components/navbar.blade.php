@@ -7,7 +7,21 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('Article.index')}}">Tutti gli Articoli</a>
-          </li>         
+          </li> 
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+            <ul>
+              @foreach ($categories as $category)              
+              <li><a class="dropdown-item"
+                href="{{ route('byCategory', $category) }}">{{ $category->name }}</a></li>
+              @endforeach
+            </ul>
+            
+          </li> 
+
          @guest
           <li class="nav-item">
             <a class="nav-link" href="{{route('register')}}">Register</a>

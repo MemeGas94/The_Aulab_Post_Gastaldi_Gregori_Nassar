@@ -8,8 +8,9 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class ArticleController extends Controller
+class ArticleController extends Controller 
 {
+    
     public function create(){
         $categories=Category::all();
         return view ('Article.create', compact('categories'));
@@ -47,4 +48,6 @@ class ArticleController extends Controller
         $articles=$user->articles()->orderBy('created_at','desc')->get();
         return view ('Article.byUser', compact('user','articles'));
     }
+
+
 }

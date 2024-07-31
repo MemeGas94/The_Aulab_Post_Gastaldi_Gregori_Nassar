@@ -11,4 +11,8 @@ class PublicController extends Controller
         $articles=Article::orderby('created_at','desc')->take(3)->get();
         return view('welcome', compact('articles'));
     }
+
+    public function career(){
+        return view('careerpage');
+    }
 }

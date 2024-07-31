@@ -41,7 +41,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Lavora con noi</a>
+            <a class="nav-link" href="{{route('careerpage')}}">Lavora con noi</a>
           </li>
 
           <form method="POST" id="form-logout" action="{{route('logout')}}">

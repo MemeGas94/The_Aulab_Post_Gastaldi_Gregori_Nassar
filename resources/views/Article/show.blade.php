@@ -1,4 +1,7 @@
 <x-layout>
+
+
+    
     <section class="container">
         <div class="row">
             <h1>Ecco l'articolo completo</h1>

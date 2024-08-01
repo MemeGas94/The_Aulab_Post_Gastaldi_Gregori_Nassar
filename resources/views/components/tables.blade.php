@@ -32,7 +32,7 @@
                             </form>
                         @break
 
-                        @case('redattore')
+                        @case('scrittore')
                             <form action="{{ route('admin.setWriter', $user) }}" method="POST">
                                 @csrf
                                 @method('PATCH')

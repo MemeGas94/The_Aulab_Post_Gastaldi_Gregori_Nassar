@@ -20,9 +20,9 @@ Route::middleware('admin')->group(function(){
     
     Route::get('/Admin/Dashbord',[AdminController::class,'dashboard'])->name('admin.dashboard');
 
-    Route::patch('/admin/{{user}}/set-admin', [AdminController::class,'setAdmin'])->name('admin.setAdmin');
-    Route::patch('/revisor/{{user}}/set-revisor', [AdminController::class,'setRevisor'])->name('admin.setRevisor');
-    Route::patch('/writer/{{user}}/set-writer', [AdminController::class,'setWriter'])->name('admins.etWriter');
+    Route::patch('/admin/set-admin/{user}', [AdminController::class,'setAdmin'])->name('admin.setAdmin');
+    Route::patch('/admin/set-revisor/{user}', [AdminController::class,'setRevisor'])->name('admin.setRevisor');
+    Route::patch('/admin/set-writer/{user}', [AdminController::class,'setWriter'])->name('admin.setWriter');
 
 });
 

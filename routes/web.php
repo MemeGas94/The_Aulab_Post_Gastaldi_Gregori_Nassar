@@ -29,9 +29,9 @@ Route::middleware('admin')->group(function(){
 
 Route::middleware('revisor')->group(function(){
     Route::get('/Revisor/Dashboard',[RevisorController::class,'dashboard'])->name('revisor.dashboard');
-    Route::patch('/Revisor/accept-article/{user}', [RevisorController::class,'acceptArticle'])->name('Revisor.accepted');
-    Route::patch('/Revisor/rejected-article/{user}', [RevisorController::class,'rejectArticle'])->name('Revisor.rejected');
-    Route::patch('/Revisor/undo_article/{user}', [RevisorController::class,'undoArticle'])->name('Revisor.undo');
+    Route::patch('/Revisor/accept-article/{article}', [RevisorController::class,'acceptArticle'])->name('Revisor.accepted');
+    Route::patch('/Revisor/rejected-article/{article}', [RevisorController::class,'rejectArticle'])->name('Revisor.rejected');
+    Route::patch('/Revisor/undo_article/{article}', [RevisorController::class,'undoArticle'])->name('Revisor.undo');
 });
 
 

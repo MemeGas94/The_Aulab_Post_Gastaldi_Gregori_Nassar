@@ -20,20 +20,20 @@ class RevisorController extends Controller
 
         $article->is_accepted=true;
         $article->save();
-        return redirect(route('Revisor.dashboard'))->with('message', "hai accettato $article->title questo articolo");
+        return redirect(route('revisor.dashboard'))->with('message', "hai accettato $article->title questo articolo");
     }
 
     public function rejectArticle(Article $article){
 
         $article->is_accepted=false;
         $article->save();
-        return redirect(route('Revisor.dashboard'))->with('message', "Articolo non accettato $article->title");
+        return redirect(route('revisor.dashboard'))->with('message', "Articolo non accettato $article->title");
     }
 
     public function undoArticle(Article $article){
 
         $article->is_accepted=NULL;
         $article->save();
-        return redirect(route('Revisor.dashboard'))->with('message', "articolo non valido $article->title");
+        return redirect(route('revisor.dashboard'))->with('message', "articolo non valido $article->title");
     }
 }

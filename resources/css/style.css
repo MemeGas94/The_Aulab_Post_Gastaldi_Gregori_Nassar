@@ -1,7 +1,10 @@
 body{
     background-color: rgb(230, 230, 230);
-    /* background: url(/public/images/swimmer-8900634_1920.jpg);
-    background-position: center; */
+}
+
+header{
+      background: url(/public/images/swimmer-8900634_1920.jpg);
+      background-position: center;
 }
 
 

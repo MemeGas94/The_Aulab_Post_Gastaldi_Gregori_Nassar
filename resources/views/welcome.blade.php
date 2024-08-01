@@ -1,8 +1,8 @@
 <x-layout>
-<div class="container">
-    <div class="row justify-content-around">
+<div class="container-fluid">
+    <div class="row">
         <div class="col-12">
-            <h1>Olimpiadi Parigi 2024</h1>
+            <h1 class="text-center my-4">Olimpiadi Parigi 2024</h1>
         </div>
     </div>
 </div>

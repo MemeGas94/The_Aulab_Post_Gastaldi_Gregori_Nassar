@@ -155,5 +155,12 @@ h1{
   }
 
   .navbar{
-   background-color : rgb(160, 128, 108);
+   background-color : black;
+   
   }
+
+  h1{
+    color:black;
+  }
+
+  

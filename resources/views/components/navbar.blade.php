@@ -3,14 +3,14 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
+            <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route('Article.index')}}">Tutti gli Articoli</a>
+            <a class="nav-link text-white" href="{{route('Article.index')}}">Tutti gli Articoli</a>
           </li> 
 
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class=" text-white nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
             <ul class="dropdown-menu">
@@ -23,21 +23,21 @@
 
          @guest
           <li class="nav-item">
-            <a class="nav-link" href="{{route('register')}}">Register</a>
+            <a class="nav-link text-white" href="{{route('register')}}">Register</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('login')}}">Login</a>
+            <a class="nav-link text-white" href="{{route('login')}}">Login</a>
           </li>
           @endguest
 
           @auth
           <li class="nav-item">
-            <a class="nav-link" href="{{route('Article.create')}}">inserisci articolo</a>
+            <a class="nav-link text-white" href="{{route('Article.create')}}">inserisci articolo</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+            <a class="nav-link text-white" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
           </li>
 
           <li class="nav-item">

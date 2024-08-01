@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 Route::get('/',[PublicController::class,'home'])->name('homepage');
 Route::get('/career',[PublicController::class, 'career'])->name('careerpage')->middleware('auth');
@@ -25,6 +26,16 @@ Route::middleware('admin')->group(function(){
     Route::patch('/admin/set-writer/{user}', [AdminController::class,'setWriter'])->name('admin.setWriter');
 
 });
+
+Route::middleware('revisor')->group(function(){
+    Route::get('/Revisor/Dashboard',[RevisorController::class,'dashboard'])->name('revisor.dashboard');
+    Route::patch('/Revisor/accept-article/{user}', [RevisorController::class,'acceptArticle'])->name('Revisor.accepted');
+    Route::patch('/Revisor/rejected-article/{user}', [RevisorController::class,'rejectArticle'])->name('Revisor.rejected');
+    Route::patch('/Revisor/undo_article/{user}', [RevisorController::class,'undoArticle'])->name('Revisor.undo');
+});
+
+
+
 
 
 

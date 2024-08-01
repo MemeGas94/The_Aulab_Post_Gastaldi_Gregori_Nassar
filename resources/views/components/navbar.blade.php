@@ -48,6 +48,11 @@
             <a class="nav-link text-white" href="{{route('admin.dashboard')}}">Richieste</a>
           </li>
 
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{{route('revisor.dashboard')}}">Revisione articoli</a>
+          </li>
+
+
           <form method="POST" id="form-logout" action="{{route('logout')}}">
 
             @csrf

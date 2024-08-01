@@ -10,7 +10,7 @@
           </li> 
 
           <li class="nav-item dropdown">
-            <a class=" text-white nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class=" text-white nav-link dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorie
             </a>
             <ul class="dropdown-menu">

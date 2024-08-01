@@ -2,7 +2,7 @@
 
     <section class="container">
         <div class="row">
-            <h1>Tutti gli articoli sul {{$category->name}}</h1>
+            <h1 class="text-center my-4">Tutti gli articoli sul {{$category->name}}</h1>
         </div>
     </section>
 

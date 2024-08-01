@@ -1,33 +1,32 @@
+<footer class="footer">
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-evenly ">
+            <div class="col-12 col-md-4 ">
 
-<footer class="conatainer-fluid">
-    <div class="footer">
-    <div class="row">
-        <div class="col-12 col-md-4 ">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
 
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+        </div>
 
+        <div class="row justify-content-around ">
+            <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Our Services</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Career</a></li>
+            </ul>
+        </div>
+
+        <div class="row mx-5 justify-content-center">
+            The Aulab Post © 2024
         </div>
     </div>
-    
-    <div class="row">
-    <ul>
-    <li><a href="#">Contact us</a></li>
-    <li><a href="#">Our Services</a></li>
-    <li><a href="#">Privacy Policy</a></li>
-    <li><a href="#">Terms & Conditions</a></li>
-    <li><a href="#">Career</a></li>
-    </ul>
-    </div>
-    
-    <div class="row mx-5">
-    The Aulab Post © 2024  
-    </div>
-    </div>
-    </footer>
-    
+</footer>
+
 
 
 

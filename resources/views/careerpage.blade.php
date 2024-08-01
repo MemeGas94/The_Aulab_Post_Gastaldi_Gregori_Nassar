@@ -4,7 +4,7 @@
             <div class="col12 ">
 
 
-                <h1>Lavora con noi</h1>
+                <h1 class="text-center">Lavora con noi</h1>
                 <form action="{{ route('postcareer') }}" method="POST">
 
 
@@ -19,7 +19,9 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <label for="exampleInputEmail1" class="form-label">
+                            <h4>Email</h4>
+                        </label>
                         <input type="email" class="form-control" id="exampleInputEmail1"
                             value="{{ Auth::user()->email }}" aria-describedby="emailHelp" name="email">
                         @error('email')

@@ -30,7 +30,7 @@ class ArticleController extends Controller
     }
     public function index(){
         $articles=Article::orderBy('created_at','desc')->get();
-        return view ('revisor.dashboard', compact('articles'));
+        return view ('Article.index', compact('articles'));
     }
 
     public function show(Article $article){

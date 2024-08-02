@@ -29,7 +29,8 @@ class ArticleController extends Controller
     
     }
     public function index(){
-        $articles=Article::orderBy('created_at','desc')->get();
+        
+        $articles=Article::where('is_accepted',NULL)->orderBy('created_at','desc')->get();
         return view ('Article.index', compact('articles'));
     }
 

@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-12">
                 <h3>Articoli da revisionare</h3>
-                <x-articlesTable :articles= "$unrevisionArticles"/>
+                <x-articlesTable :articles="$unrevisionArticles"/>
                
             </div>
         </div>
@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-12">
                 <h3>Articoli accettati</h3>
-                <x-articlesTable :articles= "$acceptedArticles"/>
+                <x-articlesTable :articles="$acceptedArticles"/>
                
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-12">
                 <h3>Articoli Respinti</h3>
-                <x-articlesTable :articles= "$rejectedArticles"/>
+                <x-articlesTable :articles="$rejectedArticles"/>
                
             </div>
         </div>

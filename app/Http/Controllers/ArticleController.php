@@ -30,7 +30,7 @@ class ArticleController extends Controller
     }
     public function index(){
         
-        $articles=Article::where('is_accepted',NULL)->orderBy('created_at','desc')->get();
+        $articles=Article::where('is_accepted',true)->orderBy('created_at','desc')->get();
         return view ('Article.index', compact('articles'));
     }
 
@@ -40,12 +40,12 @@ class ArticleController extends Controller
     }
 
     public function byCategory(Category $category){
-        $articles=$category->articles()->orderBy('created_at','desc')->get();
+        $articles=$category->articles()->where('is_accepted',true)->orderBy('created_at','desc')->get();
         return view ('Article.byCategory', compact('category','articles'));
     }
 
     public function byUser(User $user){
-        $articles=$user->articles()->orderBy('created_at','desc')->get();
+        $articles=$user->articles()->where('is_accepted',true)->orderBy('created_at','desc')->get();
         return view ('Article.byUser', compact('user','articles'));
     }
 

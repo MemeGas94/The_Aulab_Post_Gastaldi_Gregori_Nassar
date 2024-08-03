@@ -8,7 +8,11 @@
 
      <section class="container my-5">
         <div class="row">
+            
+            
             @foreach ($articles as $article)
+            @if (is_null($article->is_accepted))
+            <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Leggi articolo</a>
             <div class="col-12 col-md-3 card mx-5">
                 <div class="card-body">
                 <h5 class="card-title">{{$article->title}}</h5>
@@ -19,6 +23,7 @@
                   <a href="{{route('Article.byUser', $article->user)}}" class="btn btn-primary">{{$article->user->name}}</a>
                 </div>
               </div>
+              @endif
                 @endforeach
             </div>
         </div>

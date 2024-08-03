@@ -13,11 +13,11 @@
         </div>
     </section>
 
-        @if(Auth::user()&& Auth::user()->is_revisor) 
+        @if(Auth::user()&& Auth::user()->is_revisor && Auth::user()->articles()->where('is_accepted',)) 
             <div class="container">
                 <div class="row">
                     <div class="col-12 md-4">
-
+                    @if($revisor()->articles()->where('is_accepted',true))
                         <form method="POST" action="{{route('Revisor.accepted',$article)}}">
                             @csrf
                             @method('PATCH')
@@ -29,7 +29,7 @@
                             @method('PATCH')
                             <button class="btn btn-danger" type="submit">Riuta articolo</button>
                         </form>
-
+                        @endif
                     </div>
                 </div>
             </div>

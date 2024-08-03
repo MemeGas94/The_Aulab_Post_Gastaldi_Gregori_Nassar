@@ -17,16 +17,16 @@ class RevisorController extends Controller
 
 
     public function acceptArticle(Article $article){
-
+        // $revisors=$article->where('is_accepted',NULL)->get();
         $article->is_accepted=true;
         $article->save();
         return redirect(route('revisor.dashboard'))->with('message', "hai accettato $article->title questo articolo");
     }
 
     public function rejectArticle(Article $article){
-
         $article->is_accepted=false;
         $article->save();
+        $revisors=$article->where('is_accepted',NULL)->get();
         return redirect(route('revisor.dashboard'))->with('message', "Articolo non accettato $article->title");
     }
 

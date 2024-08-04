@@ -25,7 +25,8 @@
                         <form method="POST" action="{{ route('Revisor.undo', $article) }}"></form>
                         @csrf
 
-                        <button class="btn" type="submit">riporta in revisione </button>
+                        <button class="btn btn-primary" type="submit">riporta in revisione </button>
+                        <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Leggi articolo</a>
                     @endif
                 </td>
             </tr>

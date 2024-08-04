@@ -1,7 +1,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">#</th>
+            <th scope="col">Nr.</th>
             <th scope="col">Titolo</th>
             <th scope="col">Sottotitolo</th>
             <th scope="col">Genere</th>
@@ -22,11 +22,11 @@
                     @if (is_null($article->is_accepted))
                         <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Leggi articolo</a>
                     @else
-                        <form method="POST" action="{{ route('Revisor.undo', $article) }}"></form>
+                        <form method="POST" action="{{route('Revisor.undo', $article)}}">
                         @csrf
-
-                        <button class="btn btn-primary" type="submit">riporta in revisione </button>
-                        <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Leggi articolo</a>
+                        @method('PATCH')
+                        <button class="btn btn-success" type="submit">riporta in revisione </button>
+                    </form>
                     @endif
                 </td>
             </tr>

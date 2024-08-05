@@ -1,6 +1,16 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-light fa-bars text-white"></i>
+      </button>
       <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="p-0">
+          <a class="navbar-brand" href="">
+            <img class="logo-custom" src="/images/fiaccola.png" alt="">
+          </a>
+        </ul>
+       
+        
         <ul class="navbar-nav ">
           <li class="nav-item">
             <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
@@ -26,10 +36,11 @@
           <li class="nav-item">
             <a class="nav-link text-white" href="{{route('Article.create')}}">inserisci articolo</a>
           </li>
+
+
+         
+
           
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
-          </li>
           
         
           
@@ -40,6 +51,7 @@
           <li class="nav-item">
             <a class="nav-link text-white" href="{{route('revisor.dashboard')}}">Revisione articoli</a>
           </li>
+
           
           
           <form method="POST" id="form-logout" action="{{route('logout')}}">
@@ -66,7 +78,20 @@
            <li class="nav-item">
              <a class="nav-link text-white" href="{{route('login')}}">Login</a>
            </li>
+
+        
            @endguest
+
+           <li class="nav-item">
+            <a class="nav-link text-white" href="{{route('admin.dashboard')}}">Lavora con noi</a>
+          </li>
+
+           @auth
+               <li class="nav-item">
+            <a class="nav-link text-white" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
+          </li>
+           @endauth
+         
 
 
 

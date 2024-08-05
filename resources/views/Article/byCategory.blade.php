@@ -13,13 +13,11 @@
             @foreach ($articles as $article)
             <div class="col-12 col-md-3 card mx-5">
                 <div class="card-body">
-                <h5 class="card-title">{{$article->title}}</h5>
+                <h5 class="card-title text-center">{{$article->title}}</h5>
                 <img src="{{Storage::url($article->cover)}}" class="card-img-top" alt="...">
-                  <p class="card-text">{{$article->subtitle}}</p>
-                  <a href="{{route('Article.show', $article)}}" class="btn btn-primary my-2">Mostra articolo completo</a>
-                  <a href="{{route('Article.byCategory', $article->category)}}" class="btn btn-primary">{{$article->category->name}}</a>
-                  <a href="{{route('Article.byUser', $article->user)}}" class="btn btn-primary">{{$article->user->name}}</a>
-                </div>
+                  <p class="card-text text-center">{{$article->subtitle}}</p>
+                  <a href="{{route('Article.show', $article)}}" class="btn btn-primary my-2 d-flex justify-content-center">Mostra articolo completo</a>
+                
               </div>
                 @endforeach
             </div>

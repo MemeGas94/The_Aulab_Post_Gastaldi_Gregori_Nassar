@@ -21,7 +21,7 @@
             </ul>
         </div>
 
-        <div class="row mx-5 justify-content-center">
+        <div class="row justify-content-center">
             The Aulab Post © 2024
         </div>
     </div>

@@ -6,7 +6,28 @@
             </div>
         </div>
     </div>
-    
+
+    {{-- sezione video --}}
+
+    <section>
+
+        <article class="sectionVideo">
+
+            <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+            <div class="overlay"></div>
+
+            <!-- The HTML5 video element that will create the background video on the header -->
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <source src="/media/video/Paris.mp4" type="video/mp4">
+            </video>
+
+           
+        </article>
+
+
+    </section>
+
+    {{-- fine sezione video --}}
 
     @if (session('session'))
         <div class="alert alert-success">
@@ -34,18 +55,22 @@
                 <div class="col-12 col-md-4">
                     <div class="card">
 
-                        <div class="card-body">
-                            <img src="{{ Storage::url($article->cover) }}" class="card-img-top" alt="...">
-                            <h5 class="card-title">{{ $article->title }}</h5>
-                            <p class="card-text">{{ $article->subtitle }}</p>
-                            <a href="{{ route('Article.show', $article) }}" class="btn btn-primary my-1">Mostra articolo
-                                completo</a>
-                            <a href="{{ route('Article.byCategory', $article->category) }}"
-                                class="btn btn-primary">{{ $article->category->name }}</a>
-                            <a href="{{ route('Article.byUser', $article->user) }}"
-                                class="btn btn-primary">{{ $article->user->name }}</a>
-
+                        
+                        <div class="card my-5">
+                            <svg>
+                                <img src="{{ Storage::url($article->cover) }}" class="card-img-top" alt="...">
+                                
+                            </svg>
+                            <div class="card__content">
+                                <p class="card__title">{{ $article->title }}</p>
+                                <p class="card__description">{{ $article->subtitle }}</p>
+                                <a href="{{ route('Article.show', $article) }}" class="btn btn-primary my-1">Mostra articolo
+                                    completo</a>
+                            </div>
                         </div>
+
+
+                        
                     </div>
 
                 </div>

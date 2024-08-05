@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1>Ultimi articoli aggiornati</h1>
+    <h1 class="text-center my-4">Ultimi articoli aggiornati</h1>
 
     <section class="container">
         <div class="row">

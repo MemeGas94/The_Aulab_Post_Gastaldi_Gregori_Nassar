@@ -25,7 +25,7 @@
                         </div>
                         <button class="button" type="submit">Sign Up</button>
                         <div class="bottom-text">
-                          <p>have an account? <a href="#">Login</a></p>
+                          <p>have an account? <a href="{{route('login')}}">Login</a></p>
                         </div>
                     </form>
                 </div>

@@ -285,6 +285,7 @@ h1 {
   width: auto;
   height: auto;
   z-index: 0;
+  filter: blur(2px);
   -ms-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -294,6 +295,11 @@ h1 {
 .sectionVideo .container {
   position: relative;
   z-index: 2;
+}
+
+.text-custom{
+
+  z-index: 1000;
 }
 
 .sectionVideo .overlay {

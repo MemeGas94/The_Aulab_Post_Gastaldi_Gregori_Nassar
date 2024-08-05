@@ -64,6 +64,10 @@
           </form>
           
           
+                     <li class="nav-item">
+                      <a class="nav-link text-white" href="{{route('careerpage')}}">Lavora con noi</a>
+                    </li>
+          
           @endauth
           
         </ul>
@@ -81,10 +85,6 @@
 
         
            @endguest
-
-           <li class="nav-item">
-            <a class="nav-link text-white" href="{{route('admin.dashboard')}}">Lavora con noi</a>
-          </li>
 
            @auth
                <li class="nav-item">

@@ -1,33 +1,17 @@
 <x-layout>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="text-center my-4">Olimpiadi Parigi 2024</h1>
-            </div>
-        </div>
-    </div>
-
-    {{-- sezione video --}}
-
-    <section>
-
-        <article class="sectionVideo">
-
-            <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
-            <div class="overlay"></div>
-
-            <!-- The HTML5 video element that will create the background video on the header -->
+    <div class="container-fluid sectionVideo">
+        <div class="row overlay">
             <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                 <source src="/media/video/Paris.mp4" type="video/mp4">
             </video>
 
-           
-        </article>
+            <div class="text-custom">
+                <h1 class="text-center text-white fs-1">Olimpiadi Parigi 2024</h1>
+            </div>
 
-
-    </section>
-
-    {{-- fine sezione video --}}
+        </div>
+    </div>
+   
 
     @if (session('session'))
         <div class="alert alert-success">

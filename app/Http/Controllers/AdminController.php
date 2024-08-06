@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -45,4 +47,52 @@ class AdminController extends Controller
 
 
     }
+
+
+    public function editTag(Request $request, Tag $tag){
+        $request->validate([
+            'name'=>'required|unique:tags',
+    ]);
+
+    $tag->update([
+    'name'=>strtolower($request->name)
+   ]);
+   return redirect()->back()->with('message','tag aggiornato con successo');
+
+    }
+
+    
+    public function deleteTag(Tag $tag){
+    foreach ($tag->articles as $article) {
+       $article->tags()->detach($tag);
+    }
+
+    $tag->delete();
+   return redirect()->back()->with('message','tag eliminato con successo');
+
+    }
+
+    public function editCategory(Request $request, Category $category){
+        $request->validate([
+            'name'=>'required|unique:tags',
+    ]);
+
+        $category->update([
+        'name'=>strtolower($request->name)
+   ]);
+   return redirect()->back()->with('message','categoria aggiornato con successo');
+
+    }
+    public function deleteCategory(Category $category){
+        $category->delete();
+       return redirect()->back()->with('message','categoria eliminato con successo');
+    
+        }
+
+
+
+
+
+
+
 }

@@ -18,6 +18,12 @@ Route::get('/article/user/{user}', [ArticleController::class, 'byUser'])->name('
 Route::middleware('admin')->group(function(){
     
     Route::get('/Admin/Dashbord',[AdminController::class,'dashboard'])->name('admin.dashboard');
+    Route::put('/admin/edit/tag/{tag}', [AdminController::class,'editTag'])->name('admin.editTag');
+    Route::delete('/admin/delete/tag/{tag}', [AdminController::class,'deleteTag'])->name('admin.deleteTag');
+    Route::put('/admin/edit/category/{category}', [AdminController::class,'editCategory'])->name('admin.editCategory');
+    Route::delete('/admin/delete/category/{category}', [AdminController::class,'deleteCategory'])->name('admin.deleteCategory');
+
+
     
     Route::patch('/admin/set-admin/{user}', [AdminController::class,'setAdmin'])->name('admin.setAdmin');
     Route::patch('/admin/set-revisor/{user}', [AdminController::class,'setRevisor'])->name('admin.setRevisor');

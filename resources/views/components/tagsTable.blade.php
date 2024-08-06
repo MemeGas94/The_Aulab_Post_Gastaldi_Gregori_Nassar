@@ -18,20 +18,36 @@
                 <td>{{ count($tagTable->articles )}}</td>
                 @if(($metaType =='tags'))
                 <td>
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{route('admin.editTag', ['tag'=>$tagTable])}}">
                         @csrf
                         @method('PUT')
                         <button class="btn btn-success" type="submit">Aggiorna</button>
                     </form>
                 </td>
                         <td>
-                        <form method="POST" action="#">
+                        <form method="POST" action="{{route('admin.deleteTag', ['tag'=>$tagTable])}}">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-success" type="submit">Elimina </button>
                     </form>
                 </td>
-                    @endif
+                @else 
+                <td>
+                        <form method="POST" action="{{route('admin.editCategory', ['category'=>$tagTable])}}">
+                            @csrf
+                            @method('PUT')
+                            <input type="text" value="{{$tagTable->name}}" name="name" class="form-control">
+                            <button class="btn btn-success" type="submit">Aggiorna</button>
+                        </form>
+                    </td>
+                            <td>
+                            <form method="POST" action="{{route('admin.deleteCategory', ['category'=>$tagTable])}}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-success" type="submit">Elimina </button>
+                        </form>
+                    </td>
+                @endif
             </tr>
         @endforeach
     </tbody>

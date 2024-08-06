@@ -28,7 +28,7 @@
                         <form method="POST" action="{{route('admin.deleteTag', ['tag'=>$tagTable])}}">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-success" type="submit">Elimina </button>
+                        <button class="btn btn-success" type="submit">Elimina</button>
                     </form>
                 </td>
                 @else 

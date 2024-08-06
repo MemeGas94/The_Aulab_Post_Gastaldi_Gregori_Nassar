@@ -14,10 +14,16 @@
                         <label for="email" class="form-label text-light">Indirizzo email</label>
                         <input type="email" class="form-control w-100 rounded-pill" id="email" name="email">
                     </div>
+                    @error('email')
+                            {{ $message }}
+                        @enderror
                     <div class="input-group">
                         <label for="password" class="form-label text-light">Password</label>
                         <input type="password" class="form-control w-100 rounded-pill" id="password" name="password">
                     </div>
+                    @error('password')
+                    {{ $message }}
+                @enderror
                     <button class="button" type="submit">Sign In</button>
                   <div class="bottom-text">
                     <p>Don't have an account? <a href="{{route('register')}}">Sign Up</a></p>

@@ -8,13 +8,13 @@
                 <form action="{{ route('postcareer') }}" method="POST">
 
 
-                    {{-- @if (session('Emailfailed'))
+                    @if (session('Emailfailed'))
             
             <div class="alert alert-success">
               {{(session('Emailfailed'))}}
             </div>
             
-            @endif --}}
+            @endif
 
                     @csrf
 
@@ -31,6 +31,9 @@
                     <div class="mb-3">
                         <label for="description" class="form-label">Messaggio di presentazione</label>
                         <textarea type="text" class="form-control" id="messagge-presentation" name="text"></textarea>
+                        @error('text')
+                        {{ $message }}
+                    @enderror
                     </div>
                     <option selected>Scegli un ruolo</option>
                     <select class="form-select" id="role" name="role" aria-label="Default select example">
@@ -38,6 +41,7 @@
                         <option value="revisor">Revisor</option>
                         <option value="writer">Writer</option>
                     </select>
+                
                     <button type="submit" class="btn btn-primary my-3">Submit</button>
                 </form>
 

@@ -19,7 +19,15 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-        
+        $request->validate([
+        'title' =>'required|unique:articles|min:5',
+            'subtitle' =>'required|min:5',
+            'description' => 'required|min:10',
+            'cover' => 'required|cover',
+            'user_id' => 'required',
+            'category'=>'required',
+            'tags'=>'required',
+            ]);
 
         $article = Article::create([
             'title' => $request->title,

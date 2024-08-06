@@ -39,7 +39,7 @@
 
                 @auth
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ route('Article.create') }}">inserisci articolo</a>
+                        <a class="nav-link text-white" href="{{ route('Article.create') }}">Inserisci articolo</a>
                     </li>
 
 

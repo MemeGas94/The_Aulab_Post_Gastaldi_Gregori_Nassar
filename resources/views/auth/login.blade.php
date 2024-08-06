@@ -10,14 +10,14 @@
             <div class="col-12">
                 <form method="POST" action="{{route('login')}}" class="login-form">
                     @csrf
-                    <div class="input-group">
+                    <div>
                         <label for="email" class="form-label text-light">Indirizzo email</label>
                         <input type="email" class="form-control w-100" id="email" name="email">
                     </div>
                     @error('email')
                             {{ $message }}
                         @enderror
-                    <div class="input-group">
+                    <div>
                         <label for="password" class="form-label text-light">Password</label>
                         <input type="password" class="form-control w-100" id="password" name="password">
                     </div>

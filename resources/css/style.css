@@ -1,9 +1,9 @@
 body {
   background-color: #bcb3ec;
 }
-.layout-custom{
+/* .layout-custom{
   height: 300vh;
-}
+} */
 
 .background-filter{
   background-image: url(/public/images/SH_olimpiadi_statua_atleta.jpg);
@@ -32,10 +32,10 @@ body {
   margin: 0 auto;
 }
 
-.login-form {
+/* .login-form {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .heading {
   color: #ffffff;
@@ -376,5 +376,4 @@ video{
 
 .img-card-custom{
   height: 40vh;
-  width: 33vh;
 }

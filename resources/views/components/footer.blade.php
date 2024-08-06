@@ -24,9 +24,7 @@
         <div class="row justify-content-center">
             The Aulab Post © 2024
         </div>
-    </div>
-
-    
+    </div>    
 </footer>
 
 

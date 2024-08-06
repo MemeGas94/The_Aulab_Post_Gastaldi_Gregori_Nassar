@@ -7,30 +7,30 @@
             <div class="col-12">
                 <form method="POST" action="{{ route('register') }}" class="login-form">
                     @csrf
-                    <div class="input-group">
+                    <div>
                         <label for="name" class="form-label p-3 text-light">Nome utente</label>
-                        <input type="text" class="form-control w-100 rounded-pill" id="name" name="name">
+                        <input type="text" class="form-control w-100" id="name" name="name">
                         @error('name')
                             {{ $message }}
                         @enderror
                     </div>
-                    <div class="input-group">
+                    <div>
                         <label for="email" class="form-label p-3 text-light">Indirizzo email</label>
-                        <input type="email" class="form-control w-100 rounded-pill" id="email" name="email">
+                        <input type="email" class="form-control w-100" id="email" name="email">
                     </div>
                     @error('email')
                         {{ $message }}
                     @enderror
-                    <div class="input-group">
+                    <div>
                         <label for="password" class="form-label p-3 text-light">Password</label>
-                        <input type="password" class="form-control w-100 rounded-pill" id="password" name="password">
+                        <input type="password" class="form-control w-100" id="password" name="password">
                     </div>
                     @error('password')
                         {{ $message }}
                     @enderror
-                    <div class="input-group">
+                    <div>
                         <label for="password_confirmation" class="form-label p-3 text-light">Conferma Password</label>
-                        <input type="password" class="form-control w-100 rounded-pill" id="password_confirmation"
+                        <input type="password" class="form-control w-100" id="password_confirmation"
                             name="password_confirmation">
                     </div>
                     <button class="button" type="submit">Sign Up</button>

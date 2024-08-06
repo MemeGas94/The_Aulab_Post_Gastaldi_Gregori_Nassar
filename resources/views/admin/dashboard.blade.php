@@ -43,6 +43,16 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center my-4">Tutti i tags</h3>
+                <x-tagsTable :tagTables="$tags" metaType="tags"/>
+               
+            </div>
+        </div>
+    </div>
+
     @if (session('message'))
 
 <div class="alert alert-success">

@@ -20,6 +20,11 @@
                         <textarea type="text" class="form-control" id="description" name="description"></textarea>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="tags" class="form-label text-white">tag</label>
+                        <input type="text" class="form-control" id="tags" name="tags" value="{{old('tags')}}">
+                    </div>
+
                     <div class="mb-3 text-white">
                         <option selected>Scegli una categoria</option>
                         <select class="form-select" id="category_id" name="category"
@@ -27,8 +32,6 @@
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
-
-
                         </select>
                     </div>
 

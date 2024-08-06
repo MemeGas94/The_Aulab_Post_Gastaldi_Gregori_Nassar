@@ -17,6 +17,11 @@
                 <img src="{{Storage::url($article->cover)}}" class="card-img-top" alt="...">
                   <p class="card-text text-center">{{$article->subtitle}}</p>
                   <a href="{{route('Article.show', $article)}}" class="btn btn-primary my-2 d-flex justify-content-center">Mostra articolo completo</a>
+                  <p>
+                    @foreach($article->tags as $tag)
+                    #{{$tag->name}}
+                    @endforeach
+                </p>
                 
               </div>
                 @endforeach

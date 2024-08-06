@@ -38,6 +38,8 @@ Route::middleware('writer')->group(function(){
     
 });
 
+Route::get('/Article/search',[ArticleController::class,'articleSearch'])->name('Article.search')->middleware('auth');
+
 
 
 

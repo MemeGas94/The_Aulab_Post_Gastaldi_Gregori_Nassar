@@ -18,6 +18,11 @@
                       <a href="{{route('Article.show', $article)}}" class="btn btn-primary my-2">Mostra articolo completo</a>
                       <a href="{{route('Article.byCategory', $article->category)}}" class="btn btn-primary">{{$article->category->name}}</a>
                       <a href="{{route('Article.byUser', $article->user)}}" class="btn btn-primary">{{$article->user->name}}</a>
+                      <p>
+                        @foreach($article->tags as $tag)
+                        #{{$tag->name}}
+                        @endforeach
+                    </p>
             </div>
         </div>
             @endforeach

@@ -13,6 +13,13 @@
         
         <ul class="navbar-nav ">
           <li class="nav-item">
+          <form class="d-flex" method="GET" action="{{route('Article.search')}}" role="search">
+            <input class="form-control me-2" type="search" name="query" placeholder="cerca tra gli articoli..">
+            <button class="btn btn-outline-success" type="submit">cerca</button>
+          </form>
+        </li>
+        
+          <li class="nav-item">
             <a class="nav-link active text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
           </li>
           <li class="nav-item">

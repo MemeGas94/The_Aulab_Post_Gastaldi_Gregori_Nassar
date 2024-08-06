@@ -19,6 +19,12 @@
                                 class="btn btn-primary">{{ $article->category->name }}</a>
                             <a href="{{ route('Article.byUser', $article->user) }}"
                                 class="btn btn-primary">{{ $article->user->name }}</a>
+
+                                <p>
+                                    @foreach($article->tags as $tag)
+                                    #{{$tag->name}}
+                                    @endforeach
+                                </p>
                         </div>
                     </div>
 

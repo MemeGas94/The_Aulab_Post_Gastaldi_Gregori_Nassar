@@ -10,6 +10,11 @@
             <h5 class="display-1 text-center">{{ $article->title }}</h5>
             <p class="card-text text-center">{{ $article->subtitle }}</p>
             <p class="card-text text-center">{{ $article->description }}</p>
+            <p>
+                @foreach($article->tags as $tag)
+                #{{$tag->name}}
+                @endforeach
+            </p>
         </div>
     </section>
 

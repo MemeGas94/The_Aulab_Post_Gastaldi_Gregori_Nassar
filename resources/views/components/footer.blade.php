@@ -1,7 +1,7 @@
-<footer class="footer">
+<footer class="footer mt-5">
     <div class="container-fluid">
-        <div class="row d-flex justify-content-evenly ">
-            <div class="col-12 col-md-4 ">
+        <div class="row ">
+            <div class="col-12 d-flex justify-content-evenly ">
 
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -11,13 +11,13 @@
             </div>
         </div>
 
-        <div class="row justify-content-around ">
+        <div class="row justify-content-evenly ">
             <ul>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Career</a></li>
+                <li><a href="#"><h5 class="mx-4">Contact us</h5></a></li>
+                <li><a href="#"><h5 class="mx-4">Our Services</h5></a></li>
+                <li><a href="#"><h5 class="mx-4">Privacy Policy</h5></a></li>
+                <li><a href="#"><h5 class="mx-4">Terms & Conditions</h5></a></li>
+                <li><a href="#"><h5 class="mx-4">Career</h5></a></li>
             </ul>
         </div>
 

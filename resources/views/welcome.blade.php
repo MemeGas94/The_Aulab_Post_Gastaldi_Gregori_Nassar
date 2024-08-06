@@ -14,7 +14,7 @@
                 </video>
     
                 <div class="text-custom">
-                    <h1 class="text-center text-white fs-1">Olimpiadi Parigi 2024</h1>
+                    <h1 class="text-center text-white display-4">Olimpiadi Parigi 2024</h1>
                 </div>
 
             </div>

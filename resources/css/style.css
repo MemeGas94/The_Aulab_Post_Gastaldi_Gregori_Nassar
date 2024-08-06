@@ -1,9 +1,15 @@
 body {
   background-color: #bcb3ec;
+  font-family: "Ysabeau SC", sans-serif;
+  
 }
-/* .layout-custom{
-  height: 300vh;
-} */
+
+h1, h2, h3, h4, h5{
+  font-family: "Bungee", sans-serif;
+}
+
+
+
 
 .background-filter{
   background-image: url(/public/images/SH_olimpiadi_statua_atleta.jpg);
@@ -32,10 +38,11 @@ body {
   margin: 0 auto;
 }
 
-/* .login-form {
-  display: flex;
-  flex-direction: column;
-} */
+.login-form{
+  border: solid 4px black;
+  padding: 20px;
+  border-radius: 20px;
+}
 
 .heading {
   color: #ffffff;
@@ -376,4 +383,13 @@ video{
 
 .img-card-custom{
   height: 40vh;
+}
+
+.table-custom{
+  background-color: #bcb3ec !important;
+  
+}
+
+.background-article{
+  background-color: black;
 }

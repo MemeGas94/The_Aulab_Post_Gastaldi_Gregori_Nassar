@@ -16,7 +16,7 @@
     <x-navbar/>
     <x-header/>
    
-    <div class=" layout-custom">
+    <div>
         {{$slot}}
     </div>
 

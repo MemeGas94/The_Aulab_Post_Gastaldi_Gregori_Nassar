@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
     
-                <h2>bentornato revisore {{Auth::user()->name}}</h2>
+                <h2 class="text-center">Bentornato revisore {{Auth::user()->name}}</h2>
     
                 
     
@@ -11,6 +11,8 @@
         </div>
     
     </section>
+
+    {{-- chiedre come cambiare colore delle tabelle --}}
     
     <div class="container">
         <div class="row">

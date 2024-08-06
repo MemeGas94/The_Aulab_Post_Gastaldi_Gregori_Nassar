@@ -33,7 +33,7 @@
                         <input type="password" class="form-control w-100" id="password_confirmation"
                             name="password_confirmation">
                     </div>
-                    <button class="button" type="submit">Sign Up</button>
+                    <button class="button my-5" type="submit">Sign Up</button>
                     <div class="bottom-text">
                         <p>have an account? <a href="{{ route('login') }}">Login</a></p>
                     </div>

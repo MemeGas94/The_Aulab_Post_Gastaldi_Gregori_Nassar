@@ -9,26 +9,45 @@
 
             @foreach ($articles as $article)
                 <div class="col-12 col-md-4">
-                    
-                        <div class="card-body card my-4">
-                            <img src="{{ Storage::url($article->cover) }}" class="img-card-custom" alt="...">
-                            <h5 class="card-title text-center">{{ $article->title }}</h5>
-                            <p class="card-text text-center">{{ $article->subtitle }}</p>
-                            <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Mostra articolo
-                                completo</a>
 
-                            <a href="{{ route('Article.byCategory', $article->category) }}"
-                                class="btn btn-primary">{{ $article->category->name }}</a>
-                            <a href="{{ route('Article.byUser', $article->user) }}"
-                                class="btn btn-primary">{{ $article->user->name }}</a>
+                    <div class="card-body card my-4">
+                        <img src="{{ Storage::url($article->cover) }}" class="img-card-custom" alt="...">
+                        <h5 class="card-title text-center">{{ $article->title }}</h5>
+                        <p class="card-text text-center">{{ $article->subtitle }}</p>
 
-                            <p>
-                                @foreach ($article->tags as $tag)
-                                    #{{ $tag->name }}
-                                @endforeach
-                            </p>
-                        </div>
-                
+                        <section class="d-flex justify-content-evenly">
+
+                            <div>
+                                <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Mostra articolo
+                                    completo</a>
+    
+                            </div>
+    
+                            <div>
+    
+                                <a href="{{ route('Article.byCategory', $article->category) }}"
+                                    class="btn btn-primary">{{ $article->category->name }}</a>
+    
+                            </div>
+    
+                            <div>
+    
+                                <a href="{{ route('Article.byUser', $article->user) }}"
+                                    class="btn btn-primary">{{ $article->user->name }}</a>
+    
+                            </div>
+
+                        </section>
+                        
+
+
+                        <p>
+                            @foreach ($article->tags as $tag)
+                                #{{ $tag->name }}
+                            @endforeach
+                        </p>
+                    </div>
+
                 </div>
             @endforeach
         </div>

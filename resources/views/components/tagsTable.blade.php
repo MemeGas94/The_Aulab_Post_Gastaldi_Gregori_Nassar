@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-dark">
     <thead>
         <tr>
             <th scope="col">Nr.</th>
@@ -15,33 +15,33 @@
             <tr>
                 <th scope="row">{{ $tagTable->id }}</th>
                 <td>{{ $tagTable->name }}</td>
-                <td>{{ count($tagTable->articles )}}</td>
-                @if(($metaType =='tags'))
-                <td>
-                    <form method="POST" action="{{route('admin.editTag', ['tag'=>$tagTable])}}">
-                        @csrf
-                        @method('PUT')
-                        <button class="btn btn-success" type="submit">Aggiorna</button>
-                    </form>
-                </td>
-                        <td>
-                        <form method="POST" action="{{route('admin.deleteTag', ['tag'=>$tagTable])}}">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-success" type="submit">Elimina</button>
-                    </form>
-                </td>
-                @else 
-                <td>
-                        <form method="POST" action="{{route('admin.editCategory', ['category'=>$tagTable])}}">
+                <td>{{ count($tagTable->articles) }}</td>
+                @if ($metaType == 'tags')
+                    <td>
+                        <form method="POST" action="{{ route('admin.editTag', ['tag' => $tagTable]) }}">
                             @csrf
                             @method('PUT')
-                            <input type="text" value="{{$tagTable->name}}" name="name" class="form-control">
                             <button class="btn btn-success" type="submit">Aggiorna</button>
                         </form>
                     </td>
-                            <td>
-                            <form method="POST" action="{{route('admin.deleteCategory', ['category'=>$tagTable])}}">
+                    <td>
+                        <form method="POST" action="{{ route('admin.deleteTag', ['tag' => $tagTable]) }}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-success" type="submit">Elimina</button>
+                        </form>
+                    </td>
+                @else
+                    <td>
+                        <form method="POST" action="{{ route('admin.editCategory', ['category' => $tagTable]) }}">
+                            @csrf
+                            @method('PUT')
+                            <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control">
+                            <button class="btn btn-success" type="submit">Aggiorna</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="POST" action="{{ route('admin.deleteCategory', ['category' => $tagTable]) }}">
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-success" type="submit">Elimina </button>

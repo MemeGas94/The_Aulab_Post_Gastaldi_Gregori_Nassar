@@ -86,7 +86,7 @@ button {
   padding: 15px;
   border: none;
   border-radius: 8px;
-  background-color: #0173ed;
+  background-color: black;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
@@ -386,10 +386,6 @@ video{
   height: 40vh;
 }
 
-.table-custom{
-  background-color: #bcb3ec !important;
-  
-}
 
 .background-article{
   background-color: black;

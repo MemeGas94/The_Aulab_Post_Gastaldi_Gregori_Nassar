@@ -18,22 +18,21 @@
                         <section class="d-flex justify-content-evenly">
 
                             <div>
-                                <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Mostra articolo
-                                    completo</a>
+                                <a href="{{ route('Article.show', $article) }}" class="btn btn-dark ">Dettaglio</a>
     
                             </div>
     
                             <div>
     
                                 <a href="{{ route('Article.byCategory', $article->category) }}"
-                                    class="btn btn-primary">{{ $article->category->name }}</a>
+                                    class="btn btn-dark">{{ $article->category->name }}</a>
     
                             </div>
     
                             <div>
     
                                 <a href="{{ route('Article.byUser', $article->user) }}"
-                                    class="btn btn-primary">{{ $article->user->name }}</a>
+                                    class="btn btn-dark">{{ $article->user->name }}</a>
     
                             </div>
 

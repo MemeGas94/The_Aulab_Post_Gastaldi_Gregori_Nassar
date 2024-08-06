@@ -1,18 +1,18 @@
 <x-layout>
     @if (session('sessionn'))
-    <div class="alert alert-success">
-        {{ session('sessionn') }}
-    </div>
+        <div class="alert alert-success">
+            {{ session('sessionn') }}
+        </div>
     @endif
 
     <div class="container-fluid">
         <div class="row ">
             <div class="col-12 overlay position-relative p-0">
-                
+
                 <video playsinline autoplay muted loop>
                     <source src="/media/video/Paris.mp4" type="video/mp4">
                 </video>
-    
+
                 <div class="text-custom">
                     <h1 class="text-center text-white display-4">Olimpiadi Parigi 2024</h1>
                 </div>
@@ -29,7 +29,7 @@
         </div>
     @endif
 
-   
+
     @if (session('alert'))
         <div class="alert alert-success">
             {{ session('alert') }}
@@ -66,36 +66,38 @@
                 </p>
             </div>
             <div class=" col-12 col-md-5 background-filter">
-                
+
             </div>
 
 
         </div>
     </div>
 
-    
+
 
 
     <section class="container-fluid">
         <div class="row">
             <div class="col-12 d-flex justify-content-evenly">
-                
+
                 @foreach ($articles as $article)
+                    <div class="card mb-5" style="width: 18rem;">
+                        <img src="{{ Storage::url($article->cover) }}" class="img-card-custom" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{ $article->title }}</h5>
+                            <p class="card-text text-center">{{ Str::limit($article->description,20) }}</p>
+                            <div class="d-flex justify-content-center">
 
-                <div class="card mb-5" style="width: 18rem;">
-                    <img src="{{ Storage::url($article->cover) }}" class="img-card-custom" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title text-center">{{ $article->title }}</h5>
-                      <p class="card-text text-center">{{ $article->description }}</p>
-                      <a href="{{route('Article.show',$article)}}" class="btn btn-primary">Mostra Articolo</a>
+                                <a href="{{ route('Article.show', $article) }}" class="btn btn-dark">Mostra Articolo</a>
+
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  
-                  @endforeach
+                @endforeach
 
 
 
-                   
+
             </div>
         </div>
     </section>

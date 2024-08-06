@@ -18,17 +18,19 @@ class ArticleController extends Controller
     }
 
     public function store(Request $request)
+
     {
+       
         $request->validate([
         'title' =>'required|unique:articles|min:5',
             'subtitle' =>'required|min:5',
             'description' => 'required|min:10',
-            'cover' => 'required|cover',
-            'user_id' => 'required',
+            'cover' => 'required|image',
             'category'=>'required',
             'tags'=>'required',
-            ]);
-
+        ]);
+        
+       
         $article = Article::create([
             'title' => $request->title,
             'subtitle' => $request->subtitle,
@@ -37,6 +39,7 @@ class ArticleController extends Controller
             'cover' => $request->file('cover')->store('public/images'),
             'user_id' => Auth::user()->id,
         ]);
+        
         $tags = explode(',', $request->tags);
         foreach ($tags as $i => $tag) {
             $tags[$i] = trim($tag);

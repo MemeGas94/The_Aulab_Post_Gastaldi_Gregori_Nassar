@@ -82,7 +82,7 @@
                 
                 @foreach ($articles as $article)
 
-                <div class="card" style="width: 18rem;">
+                <div class="card mb-5" style="width: 18rem;">
                     <img src="{{ Storage::url($article->cover) }}" class="img-card-custom" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center">{{ $article->title }}</h5>

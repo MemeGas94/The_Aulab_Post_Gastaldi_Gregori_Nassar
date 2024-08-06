@@ -5,7 +5,7 @@
             <i class="fa-solid fa-bars text-white"></i>
         </button>
         <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="p-0">
+            <ul class="p-0 mt-1">
                 <a class="navbar-brand" href="">
                     <img class="logo-custom" src="/images/fiaccola.png" alt="">
                 </a>

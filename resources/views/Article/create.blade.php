@@ -1,8 +1,16 @@
 <x-layout>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-4 background-custom">
+                
+                
             </div>
+
+
+
+
+
+
             <div class="col-12 col-md-8 bg-dark vh-100">
 
                 <form method="POST" action="{{ route('Article.store') }}" enctype="multipart/form-data">

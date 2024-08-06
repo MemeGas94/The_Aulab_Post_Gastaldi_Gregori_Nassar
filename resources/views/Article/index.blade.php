@@ -6,14 +6,14 @@
         <div class="row">
             @foreach ($articles as $article)
                 <div class="col-12 col-md-4">
-                    <div class="card">
+                    <div class="card my-4">
 
 
                         <div class="card-body">
                             <img src="{{ Storage::url($article->cover) }}" class="card-img-top" alt="...">
-                            <h5 class="card-title">{{ $article->title }}</h5>
-                            <p class="card-text">{{ $article->subtitle }}</p>
-                            <a href="{{ route('Article.show', $article) }}" class="btn btn-primary">Mostra articolo
+                            <h5 class="card-title text-center">{{ $article->title }}</h5>
+                            <p class="card-text text-center">{{ $article->subtitle }}</p>
+                            <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Mostra articolo
                                 completo</a>
                                 
                             <a href="{{ route('Article.byCategory', $article->category) }}"

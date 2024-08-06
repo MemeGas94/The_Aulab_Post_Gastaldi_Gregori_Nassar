@@ -1,4 +1,10 @@
 <x-layout>
+    @if (session('sessionn'))
+    <div class="alert alert-success">
+        {{ session('sessionn') }}
+    </div>
+    @endif
+
     <div class="container-fluid">
         <div class="row ">
             <div class="col-12 overlay position-relative p-0">
@@ -23,12 +29,7 @@
         </div>
     @endif
 
-    @if (session('sessionn'))
-        <div class="alert alert-success">
-            {{ 'mail inviata con successo' }}
-        </div>
-    @endif
-
+   
     @if (session('alert'))
         <div class="alert alert-success">
             {{ session('alert') }}

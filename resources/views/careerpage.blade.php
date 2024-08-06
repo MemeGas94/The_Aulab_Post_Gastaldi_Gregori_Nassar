@@ -1,50 +1,36 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="login-container my-5">
         <div class="row">
-            <div class="col12 ">
-
-
-                <h1 class="text-center">Lavora con noi</h1>
-                <form action="{{ route('postcareer') }}" method="POST">
-
-
-                    @if (session('Emailfailed'))
-            
-            <div class="alert alert-success">
-              {{(session('Emailfailed'))}}
-            </div>
-            
-            @endif
-
+            <div class="col-12">
+                <form method="POST" action="{{ route('postcareer') }}" class="login-form">
                     @csrf
+                    
+                    <div class="input-group">
+                        <label for="email" class="form-label text-center p-3 text-light">Email</label>
+                        <input type="email" value="{{ Auth::user()->email }}" aria-describedby="emailHelp" class="form-control w-100" id="email" name="email">
+                    </div>                                   
+                    @error('email')
+                        {{ $message }}
+                    @enderror
 
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">
-                            <h4>Email</h4>
-                        </label>
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                            value="{{ Auth::user()->email }}" aria-describedby="emailHelp" name="email">
-                        @error('email')
-                            {{ $message }}
-                        @enderror
-                    </div>
-                    <div class="mb-3">
-                        <label for="description" class="form-label">Messaggio di presentazione</label>
-                        <textarea type="text" class="form-control" id="messagge-presentation" name="text"></textarea>
+                    <div class="input-group mb-3">
+                        <label for="description" class="form-label p-3 text-light">Messaggio di presentazione</label>
+                        <textarea type="text" class="form-control w-100" id="messagge-presentation" name="text"></textarea>
                         @error('text')
                         {{ $message }}
                     @enderror
-                    </div>
-                    <option selected>Scegli un ruolo</option>
+
+                    <div>
+                        <option selected class="form-label p-3 text-light">Scegli un ruolo</option>
                     <select class="form-select" id="role" name="role" aria-label="Default select example">
                         <option value="admin">Admin</option>
                         <option value="revisor">Revisor</option>
                         <option value="writer">Writer</option>
                     </select>
-                
-                    <button type="submit" class="btn btn-primary my-3">Submit</button>
-                </form>
 
+                    <button class="btn button mb-3" type="submit">Submit</button>
+                    <div class="bottom-text">
+                </form>
             </div>
         </div>
     </div>

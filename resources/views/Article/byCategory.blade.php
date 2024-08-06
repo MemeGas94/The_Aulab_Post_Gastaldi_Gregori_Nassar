@@ -6,11 +6,11 @@
                 <h1 class="text-center my-4 ">Tutti gli articoli sul {{ $category->name }}</h1>
             </div>
         </section>
-    
+
         <section class="container-fluid ">
             <div class="row ">
-    
-    
+
+
                 @foreach ($articles as $article)
                     <div class="col-12 col-md-3 card ms-5 mb-5 ">
                         <div class="card-body">
@@ -24,12 +24,13 @@
                                     #{{ $tag->name }}
                                 @endforeach
                             </p>
-    
+
                         </div>
+                    </div>
                 @endforeach
             </div>
-            </div>
-        </section>
+    </div>
+    </section>
 
 
 

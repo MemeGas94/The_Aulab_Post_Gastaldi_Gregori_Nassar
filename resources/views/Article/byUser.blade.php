@@ -1,34 +1,42 @@
 <x-layout>
 
-
-    <section class="container">
-        <div class="row">
-            <h1>Articoli inseriti da {{$user->name}}</h1>
-        </div>
-    </section>
-
-     <section class="container my-5">
-        <div class="row">
-            @foreach ($articles as $article)
-            <div class="col-12 col-md-3 card mx-5 my-5">
-                <div class="card">
-                    <h5 class="card-title">{{$article->title}}</h5>
-                    <img src="{{Storage::url($article->cover)}}" class="card-img-top" alt="...">
-                      <p class="card-text">{{$article->subtitle}}</p>
-                      <a href="{{route('Article.show', $article)}}" class="btn btn-primary my-2">Mostra articolo completo</a>
-                      <a href="{{route('Article.byCategory', $article->category)}}" class="btn btn-primary">{{$article->category->name}}</a>
-                      <a href="{{route('Article.byUser', $article->user)}}" class="btn btn-primary">{{$article->user->name}}</a>
-                      <p>
-                        @foreach($article->tags as $tag)
-                        #{{$tag->name}}
-                        @endforeach
-                    </p>
+    <div class="vh-100">
+        <section class="container-fluid">
+            <div class="row">
+                <h1 class="text-center my-4 ">Articoli inseriti da {{ $user->name }}</h1>
             </div>
-        </div>
-            @endforeach
-        </div>
-    </section>
+        </section>
 
+        <section class="container-fluid ">
+            <div class="row ">
+
+
+                @foreach ($articles as $article)
+                    <div class="col-12 col-md-3 card ms-5 mb-5 ">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{ $article->title }}</h5>
+                            <img src="{{ Storage::url($article->cover) }}" class="card-img-top" alt="...">
+                            <p class="card-text text-center">{{ $article->subtitle }}</p>
+                            <a href="{{ route('Article.show', $article) }}"
+                                class="btn btn-dark my-2 d-flex justify-content-center">Mostra articolo completo</a>
+                            <p>
+                                @if ($article->category)
+                                    <a href="{{ route('Article.byCategory', $article->category) }}"
+                                        class="btn btn-dark">{{ $article->category->name }}</a>
+                                @else
+                                    <p>Nessuna Categoria</p>
+                                @endif
+                                @foreach ($article->tags as $tag)
+                                    #{{ $tag->name }}
+                                @endforeach
+                            </p>
+
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+    </div>
+    </section>
 
 
 </x-layout>

@@ -24,8 +24,11 @@
     
                             <div>
     
-                                <a href="{{ route('Article.byCategory', $article->category) }}"
-                                    class="btn btn-dark">{{ $article->category->name }}</a>
+                                @if($article->category)
+                                <a href="{{route('Article.byCategory', $article->category)}}" class=" btn btn-dark">{{$article->category->name}}</a>
+                                @else
+                                <p>Nessuna Categoria</p>
+                                @endif
     
                             </div>
     

@@ -21,6 +21,7 @@
                         <form method="POST" action="{{ route('admin.editTag', ['tag' => $tagTable]) }}">
                             @csrf
                             @method('PUT')
+                            <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control">
                             <button class="btn btn-success" type="submit">Aggiorna</button>
                         </form>
                     </td>

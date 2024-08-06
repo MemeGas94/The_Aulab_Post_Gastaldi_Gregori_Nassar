@@ -1,17 +1,17 @@
 <x-layout>
 
-    <section class="container">
+    <section class="container-fluid">
         <div class="row">
-            <h1 class="text-center my-4">Tutti gli articoli sul {{$category->name}}</h1>
+            <h1 class="text-center my-4 ">Tutti gli articoli sul {{$category->name}}</h1>
         </div>
     </section>
 
-     <section class="container my-5">
-        <div class="row">
+     <section class="container-fluid ">
+        <div class="row ">
             
             
             @foreach ($articles as $article)
-            <div class="col-12 col-md-3 card mx-5">
+            <div class="col-12 col-md-3 card ms-5 ">
                 <div class="card-body">
                 <h5 class="card-title text-center">{{$article->title}}</h5>
                 <img src="{{Storage::url($article->cover)}}" class="card-img-top" alt="...">

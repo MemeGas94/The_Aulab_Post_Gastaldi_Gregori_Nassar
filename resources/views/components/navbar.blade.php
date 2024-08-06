@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fa-light fa-bars text-white"></i>
+        <i class="fa-solid fa-bars text-white"></i>
       </button>
       <div class="collapse navbar-collapse " id="navbarNav">
         <ul class="p-0">

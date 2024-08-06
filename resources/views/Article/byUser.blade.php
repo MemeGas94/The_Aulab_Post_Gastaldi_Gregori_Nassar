@@ -11,7 +11,7 @@
         <div class="row">
             @foreach ($articles as $article)
             <div class="col-12 col-md-3 card mx-5 my-5">
-                <div class="card-body">
+                <div class="card">
                     <h5 class="card-title">{{$article->title}}</h5>
                     <img src="{{Storage::url($article->cover)}}" class="card-img-top" alt="...">
                       <p class="card-text">{{$article->subtitle}}</p>

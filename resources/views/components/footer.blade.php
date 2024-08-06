@@ -3,10 +3,10 @@
         <div class="row d-flex justify-content-evenly ">
             <div class="col-12 col-md-4 ">
 
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-youtube"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
 
             </div>
         </div>
@@ -25,6 +25,8 @@
             The Aulab Post © 2024
         </div>
     </div>
+
+    
 </footer>
 
 

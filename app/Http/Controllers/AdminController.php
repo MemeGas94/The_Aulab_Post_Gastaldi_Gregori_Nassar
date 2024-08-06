@@ -89,10 +89,15 @@ class AdminController extends Controller
     
         }
 
+        public function storeCategory(Request $request){
+           Category::create([
+                'name'=>strtolower($request->name),
+        ]);
+        return redirect()->back()->with('message','categoria inserita con successo');
 
 
 
 
 
-
+}
 }

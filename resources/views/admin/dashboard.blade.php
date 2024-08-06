@@ -1,5 +1,12 @@
 <x-layout>
-
+    
+    @if (session('message'))
+    
+    <div class="alert alert-success">
+    {{(session('message'))}}
+    </div>
+    
+    @endif
     <section class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -53,31 +60,19 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center my-4">Tutte le categorie</h3>
+
+    <div class="justify-content-between">
+          <h2 class="text-center my-4">Tutte le categorie</h2>
+                <form method="POST" class="w-50 d-flex m-3" action="{{route('admin.storeCategory')}}">
+                    @csrf
+                    <input type="text" name="name" class="form-control me-2" placeholder="inserisci una nuova categoria">
+                    <button class="btn btn-outline-success" type="submit">Inserisci</button>
+                </form>
+            </div>
                 <x-tagsTable :tagTables="$categories" metaType="categorie"/>
                
-            </div>
-        </div>
     </div>
-
-
-    @if (session('message'))
-
-<div class="alert alert-success">
-    {{(session('message'))}}
-</div>
-    
-@endif
-
-
-
-
-
-
-
+   </div>
 
 
 

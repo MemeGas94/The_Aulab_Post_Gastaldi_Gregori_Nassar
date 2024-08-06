@@ -254,7 +254,8 @@ h1 {
   width: 0;
   height: 2px;
   /* Spessore della linea */
-  background-color: #007bff9c;
+  background-color: #bcb3ec;
+  background-color: ;
   /* Colore della linea */
   transition: width 0.3s;
   /* Animazione della larghezza */

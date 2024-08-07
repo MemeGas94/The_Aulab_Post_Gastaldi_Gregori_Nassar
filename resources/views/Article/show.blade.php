@@ -5,16 +5,24 @@
     <section class="container">
         <div class="row">
             <h1 class="text-center my-5">Ecco l'articolo completo</h1>
+        </div>
 
-            <img class="my-5" src="{{ Storage::url($article->cover) }}" alt="...">
-            <h5 class="display-1 text-center">{{ $article->title }}</h5>
-            <p class="card-text text-center">{{ $article->subtitle }}</p>
-            <p class="card-text text-center">{{ $article->description }}</p>
-            <p>
-                @foreach($article->tags as $tag)
-                #{{$tag->name}}
-                @endforeach
-            </p>
+        <div class="row">
+
+            <div class="col-12 col-md-6">
+                <img class="img-fluid my-5" src="{{ Storage::url($article->cover) }}" alt="...">
+            </div>
+
+            <div class="col-12 col-md-5 d-flex flex-column my-5 justify-content-center m-5">
+                <h5 class="text-center">{{ $article->title }}</h5>
+                <p class="card-text text-center">{{ $article->subtitle }}</p>
+                <p class="card-text text-center">{{ $article->description }}</p>
+                <p>
+                    @foreach($article->tags as $tag)
+                    #{{$tag->name}}
+                    @endforeach
+                </p>
+            </div>
         </div>
     </section>
 

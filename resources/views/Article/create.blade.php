@@ -2,17 +2,9 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-4 background-custom">
-
-
             </div>
 
-
-
-
-
-
             <div class="col-12 col-md-8 background-article vh-100">
-
                 <form method="POST" action="{{ route('Article.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="my-3">
@@ -34,9 +26,10 @@
                     @error('subtitle')
                         {{ $message }}
                     @enderror
+
                     <div class="my-3">
                         <label for="description" class="form-label text-white">
-                            <h5>Descrizione</h5>
+                            <h5>Articolo completo</h5>
                         </label>
                         <textarea type="text" class="form-control" id="description" name="description"></textarea>
                     </div>
@@ -46,7 +39,7 @@
 
                     <div class="my-3">
                         <label for="tags" class="form-label text-white">
-                            <h5>tag</h5>
+                            <h5>Tag</h5>
                         </label>
                         <input type="text" class="form-control" id="tags" name="tags"
                             value="{{ old('tags') }}">
@@ -63,7 +56,7 @@
                             <option selected>Scegli una categoria</option>
 
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -80,6 +73,7 @@
                     @error('cover')
                         {{ $message }}
                     @enderror
+                    
                     <div class="bottom-text">
                         <button class="btn button my-1" type="submit">Submit</button>
                     </div>

@@ -18,14 +18,14 @@
 
           @if($article->category)
           <p>Categoria</p>
-          <a href="{{route('Article.byCategory', $article->category)}}" class=" text-capitalize fw-bold text-muted btn btn-primary">{{$article->category->name}}</a>
+          <a href="{{route('Article.byCategory', $article->category)}}" class="btn btn-dark">{{$article->category->name}}</a>
           @else
           <p>Nessuna Categoria</p>
           @endif
 
 
-          <a href="{{route('Article.byUser', $article->user)}}" class="btn btn-primary">{{$article->user->name}}</a>
-          <a href="{{route('Article.show', $article)}}" class="btn btn-primary my-2">Mostra articolo completo</a>
+          <a href="{{route('Article.byUser', $article->user)}}" class="btn btn-dark">{{$article->user->name}}</a>
+          <a href="{{route('Article.show', $article)}}" class="btn btn-dark my-2">Dettaglio</a>
       </div>
     </div>
         @endforeach

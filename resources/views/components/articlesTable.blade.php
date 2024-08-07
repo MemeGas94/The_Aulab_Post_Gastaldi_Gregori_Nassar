@@ -25,7 +25,7 @@
                         <form method="POST" action="{{route('Revisor.undo', $article)}}">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-success" type="submit">riporta in revisione </button>
+                        <button class="btn btn-success" type="submit">Riporta in revisione </button>
                     </form>
                     @endif
                 </td>

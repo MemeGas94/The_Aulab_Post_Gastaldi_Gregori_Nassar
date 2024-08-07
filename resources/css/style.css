@@ -256,7 +256,6 @@ h1 {
   height: 2px;
   /* Spessore della linea */
   background-color: #bcb3ec;
-  background-color: ;
   /* Colore della linea */
   transition: width 0.3s;
   /* Animazione della larghezza */
@@ -390,4 +389,18 @@ video{
 
 .background-article{
   background-color: black;
+}
+
+
+.table > :not(caption) > * > * {
+  background-color: #bcb3ec !important;
+  color: #000000;
+}
+
+thead, tbody, tfoot, tr, td, th {
+  border-color: black;
+}
+
+input:required{
+  color: red;
 }

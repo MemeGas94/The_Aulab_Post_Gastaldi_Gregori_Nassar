@@ -18,11 +18,11 @@
                 <td>{{ count($tagTable->articles) }}</td>
                 @if ($metaType == 'tags')
                     <td>
-                        <form method="POST" action="{{ route('admin.editTag', ['tag' => $tagTable]) }}">
+                        <form method="POST" class="d-flex" action="{{ route('admin.editTag', ['tag' => $tagTable]) }}">
                             @csrf
                             @method('PUT')
                             <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control">
-                            <button class="btn btn-success" type="submit">Aggiorna</button>
+                            <button class="btn btn-success ms-1" type="submit">Aggiorna</button>
                         </form>
                     </td>
                     <td>
@@ -34,11 +34,11 @@
                     </td>
                 @else
                     <td>
-                        <form method="POST" action="{{ route('admin.editCategory', ['category' => $tagTable]) }}">
+                        <form method="POST"  class="d-flex" action="{{ route('admin.editCategory', ['category' => $tagTable]) }}">
                             @csrf
                             @method('PUT')
                             <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control">
-                            <button class="btn btn-success" type="submit">Aggiorna</button>
+                            <button class="btn btn-success ms-1" type="submit">Aggiorna</button>
                         </form>
                     </td>
                     <td>

@@ -6,6 +6,7 @@ use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -39,9 +40,10 @@ class ArticleController extends Controller
             'category_id' => $request->category,
             'cover' => $request->file('cover')->store('public/images'),
             'user_id' => Auth::user()->id,
-        ]);
+            'slug'=>Str::slug($request->title),
+                ]);
         
-        $tags = explode(',', $request->tags);
+        $tags = explode(',  ', $request->tags);
         foreach ($tags as $i => $tag) {
             $tags[$i] = trim($tag);
         }
@@ -89,20 +91,19 @@ class ArticleController extends Controller
     }
 
     public function modify(Article $article)
-    {
-        if(!is_null($article->is_accepted)){
-            $article->is_accepted=NULL;
-            $article->save();
-        }
-    
+    { 
         if (Auth::user()->id == $article->user_id) {
             return view('Article.edit', compact('article'));
         }
         return redirect()->back()->with('session', 'non sei autorizzato');
     }
-
+    
     public function update(Request $request, Article $article)
     {
+        if(!is_null($article->is_accepted)){
+            $article->is_accepted=NULL;
+            $article->save();
+        }
 
         $request->validate([
             'title' => 'required|min:5|unique:articles,title,' . $article->id,
@@ -119,6 +120,7 @@ class ArticleController extends Controller
             'subtitle' => $request->subtitle,
             'description' => $request->description,
             'category_id' => $request->category,
+            'slug'=>Str::slug($request->title),
         ]);
         if ($request->cover) {
             Storage::delete($article->cover);
@@ -128,7 +130,7 @@ class ArticleController extends Controller
         }
        
 
-        $tags = explode(',', $request->tags);
+        $tags = explode(',   ', $request->tags);
         foreach ($tags as $i => $tag) {
             $tags[$i] = trim($tag);
         }
@@ -150,7 +152,13 @@ class ArticleController extends Controller
         foreach ($article->tags as $tag) {
             $article->tags()->detach($tag);
          }
+
+         if ($article->cover) {
+            Storage::delete($article->cover);
+         }
          $article->delete();
          return redirect(route('writer.dashboard'))->with('session', 'Articolo eliminato con successo');
     }
+
+
 }

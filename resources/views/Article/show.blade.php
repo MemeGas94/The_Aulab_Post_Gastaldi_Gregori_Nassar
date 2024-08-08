@@ -5,6 +5,7 @@
     <section class="container">
         <div class="row">
             <h1 class="text-center my-5 display-3">Ecco l'articolo completo</h1>
+            <p> tempo di lettura {{$article->readDuration()}} min</p>
         </div>
 
         <div class="row justify-content-evenly border-custom mb-5">

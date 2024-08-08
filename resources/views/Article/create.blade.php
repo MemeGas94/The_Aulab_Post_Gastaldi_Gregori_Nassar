@@ -62,7 +62,7 @@
                         <h5>Categorie</h5>
                         <select class="form-select @error('title') is-invalid @enderror" id="category_id" name="category"
                             aria-label="Default select example">
-                            <option selected>Scegli una categoria</option>
+                            <option value="" selected>Scegli una categoria</option>
                             @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                             @endforeach

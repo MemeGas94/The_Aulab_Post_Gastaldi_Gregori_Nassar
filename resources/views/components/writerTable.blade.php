@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <th scope="col">Nr.</th>
+            <th class="me-5"scope="col">Nr.</th>
             <th scope="col">Titolo</th>
             <th scope="col">Sottotitolo</th>
             <th scope="col">Genere</th>
@@ -17,7 +17,7 @@
             <tr>
                 <th class="mx-3" scope="row">{{ $article->id }}</th>
                 <td class=" mx-3">{{ $article->title }}</td>
-                <td class=" mx-3">{{ $article->subtitle }}</td>
+                <td class=" mx-3">{{ Str::limit($article->subtitle,100) }}</td>
                 <td class="mx-33"> {{ $article->category->name ?? 'Nessuna categoria' }}
                     {{-- <p>
                     @if ($article->category)
@@ -30,7 +30,7 @@
 
                 <td>
                     @foreach ($article->tags as $tag)
-                        #{{ $tag->name }}
+                        #{{ Str::limit($tag->name,90)}}
                     @endforeach
                 </td>
                 <td>{{$article->created_at->format('d/m/y')}}</td>

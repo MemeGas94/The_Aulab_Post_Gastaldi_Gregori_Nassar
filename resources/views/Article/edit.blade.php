@@ -42,7 +42,7 @@
                         <label for="description" class="form-label text-white">
                             <h5>Articolo completo</h5>
                         </label>
-                        <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description">"{{ $article->description }}"</textarea>
+                        <textarea type="text" class="form-control @error('description') is-invalid @enderror" id="description" name="description" value="{{$article->description}}">"{{ $article->description }}"</textarea>
                     </div>
                     @error('description')
                         <p class="text-danger">
@@ -67,7 +67,8 @@
                         <h5>Categorie</h5>
                         <select class="form-select @error('category') is-invalid @enderror" id="category_id"
                             name="category" aria-label="Default select example">
-                            <option selected>Scegli una categoria</option>
+                            
+                            {{-- <option  value="" >Scegli una categoria</option> --}}
                             @foreach ($categories as $category)
                                 <option value="{{ $category->id }}" @if($article->category_id==$category->id) selected @endif>{{ $category->name }}</option>
                             @endforeach

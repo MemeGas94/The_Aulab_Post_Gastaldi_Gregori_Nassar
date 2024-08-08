@@ -22,6 +22,7 @@
                         Categorie
                     </a>
                     <ul class="dropdown-menu">
+                        
                         @foreach ($categories as $category)
                             <li><a class="dropdown-item mt-1"
                                     href="{{ route('Article.byCategory', $category) }}">{{ $category->name }}</a></li>
@@ -40,9 +41,11 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li class="nav-item">
+                                <a class="nav-link text-dark mt-1" href="{{ route('writer.dashboard') }}">modifica articolo</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link text-dark mt-1" href="{{ route('admin.dashboard') }}">Richieste</a>
                             </li>
-
                             <li class="nav-item">
                                 <a class="nav-link text-dark mt-1" href="{{ route('revisor.dashboard') }}">Revisione
                                     articoli</a>

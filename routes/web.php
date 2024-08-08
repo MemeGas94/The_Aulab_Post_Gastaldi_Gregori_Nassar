@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\RevisorController;
 
@@ -42,13 +43,18 @@ Route::middleware('revisor')->group(function(){
 Route::middleware('writer')->group(function(){
     Route::get('/Article/create',[ArticleController::class,'create'])->name('Article.create')->middleware('auth');
     Route::post('/Article/store',[ArticleController::class,'store'])->name('Article.store');
+    Route::get('/article/modify/{article}',[ArticleController::class,'modify'])->name('Article.modifyArticle');
+    Route::put('/article/update/{article}',[ArticleController::class,'update'])->name('Article.aggiorna');
+    Route::delete('/article/delete{article}',[ArticleController::class,'destroy'])->name('Article.destroy');
     
 });
 
 Route::get('/Article/search',[ArticleController::class,'articleSearch'])->name('Article.search')->middleware('auth');
 
 
+Route::middleware('writer')->group(function(){
+    Route::get('/writer/Dashboard',[WriterController::class,'dashboard'])->name('writer.dashboard');
+    
 
 
-
-
+});

@@ -1,10 +1,13 @@
-<x-layout>
+k<x-layout>
 
     @if (session('message'))
         <div class="alert alert-success">
             {{ session('message') }}
         </div>
     @endif
+    
+
+    
     <section class="container-fluid">
         <div class="row">
             <div class="col-12">
@@ -73,8 +76,11 @@
                     <button class="btn btn-outline-success" type="submit">Inserisci</button>
                 </form>
             </div>
+
             <div class="col-12">
+                {{-- @if (Auth::user()->category) --}}
                 <x-tagsTable :tagTables="$categories" metaType="categorie" />
+                {{-- @endif --}}
             </div>
 
         </div>

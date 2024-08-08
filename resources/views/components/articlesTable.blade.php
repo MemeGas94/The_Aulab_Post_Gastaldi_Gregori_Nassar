@@ -20,12 +20,12 @@
                 <td>
 
                     @if (is_null($article->is_accepted))
-                        <a href="{{ route('Article.show', $article) }}" class="btn btn-primary ">Leggi articolo</a>
+                        <a href="{{ route('Article.show', $article) }}" class="btn btn-dark ">Leggi articolo</a>
                     @else
                         <form method="POST" action="{{route('Revisor.undo', $article)}}">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-success" type="submit">Riporta in revisione </button>
+                        <button class="btn btn-dark" type="submit">Riporta in revisione </button>
                     </form>
                     @endif
                 </td>

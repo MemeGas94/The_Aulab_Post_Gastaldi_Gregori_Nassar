@@ -15,7 +15,7 @@
                     <div class="col-12 col-md-3 card ms-5 mb-5 ">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{ $article->title }}</h5>
-                            <img src="{{ Storage::url($article->cover) }}" class="card-img-top" alt="...">
+                            <img src="{{ Storage::url($article->cover) }}" class="card-img-top" alt="{{ $article->title }}">
                             <p class="card-text text-center">{{ $article->subtitle }}</p>
                             <a href="{{ route('Article.show', $article) }}"
                                 class="btn btn-dark my-2 d-flex justify-content-center">Mostra articolo completo</a>

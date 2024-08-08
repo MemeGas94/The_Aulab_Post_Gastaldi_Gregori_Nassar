@@ -30,7 +30,7 @@
                     </select>
                     
                     <div class="bottom-text">
-                        <button class="btn button my-3" type="submit">Submit</button>
+                        <button class="btn button my-3" type="submit">Candidati</button>
                     </div>
                 </form>
             </div>

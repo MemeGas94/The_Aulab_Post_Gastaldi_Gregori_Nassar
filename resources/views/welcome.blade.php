@@ -25,7 +25,7 @@
 
     @if (session('session'))
         <div class="alert alert-success">
-            {{ 'Articolo creato con successo' }}
+            {{ session('session')  }}
         </div>
     @endif
 

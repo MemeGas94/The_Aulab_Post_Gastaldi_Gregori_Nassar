@@ -25,7 +25,7 @@
 
     </section>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row border-custom">
             <div class="col-12 ">
                 <h3 class="text-center my-4">Articoli accettati</h3>
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row border-custom my-5">
             <div class="col-12">
                 <h3 class="text-center my-4">Articoli in revisione</h3>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row border-custom my-5">
             <div class="col-12">
                 <h3 class="text-center my-4">Articoli rifiutati</h3>

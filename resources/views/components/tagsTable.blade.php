@@ -4,7 +4,7 @@
             <th scope="col">Nr.</th>
             <th scope="col">Nome Tag</th>
             <th scope="col">Q.ta articoli collegati</th>
-            <th scope="col">Aggiorna</th>
+            <th scope="col"><p class="m-0 text-end me-2">Aggiorna</p></th>
             <th scope="col">Cancella</th>
         </tr>
     </thead>
@@ -21,7 +21,7 @@
                         <form method="POST" class="d-flex" action="{{ route('admin.editTag', ['tag' => $tagTable]) }}">
                             @csrf
                             @method('PUT')
-                            <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control">
+                            <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control input-custom">
                             <button class="btn btn-dark text-success ms-1 " type="submit">Aggiorna</button>
                         </form>
                     </td>
@@ -34,10 +34,10 @@
                     </td>
                 @else
                     <td>
-                        <form method="POST"  class="d-flex" action="{{ route('admin.editCategory', ['category' => $tagTable]) }}">
+                        <form method="POST"  class="d-flex " action="{{ route('admin.editCategory', ['category' => $tagTable]) }}">
                             @csrf
                             @method('PUT')
-                            <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control">
+                            <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control input-custom">
                             <button class="btn btn-dark text-success ms-1" type="submit">Aggiorna</button>
                         </form>
                     </td>

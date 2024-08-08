@@ -1,9 +1,9 @@
 <x-layout>
     <section class="container-fluid">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 my-5">
     
-                <h2 class="text-center">Bentornato revisore {{Auth::user()->name}}</h2>
+                <h2 class="text-center display-3">Bentornato revisore {{Auth::user()->name}}</h2>
     
                 
     
@@ -16,7 +16,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 border-custom my-4">
                 <h3>Articoli da revisionare</h3>
                 <x-articlesTable :articles="$unrevisionArticles"/>
                
@@ -26,7 +26,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 border-custom my-4">
                 <h3>Articoli accettati</h3>
                 <x-articlesTable :articles="$acceptedArticles"/>
                
@@ -36,7 +36,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 border-custom my-4">
                 <h3>Articoli Respinti</h3>
                 <x-articlesTable :articles="$rejectedArticles"/>
                

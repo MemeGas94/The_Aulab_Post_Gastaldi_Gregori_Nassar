@@ -411,3 +411,8 @@ input:required{
   border-radius: 20px;
 
 }
+
+.input-custom{
+  width: 75%;
+  margin-right: 15px;
+}

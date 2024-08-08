@@ -13,16 +13,21 @@
 
                 <h2 class="text-center my-5 display-3">Bentornato Redattore {{ Auth::user()->name }}</h2>
 
+               
+
 
 
             </div>
+        
         </div>
+
+        
 
     </section>
 
     <div class="container">
         <div class="row border-custom">
-            <div class="col-12">
+            <div class="col-12 ">
                 <h3 class="text-center my-4">Articoli accettati</h3>
                 <x-writerTable :articles="$acceptedArticles" />
 

@@ -1,4 +1,4 @@
-<table>
+<table class="table">
     <thead>
         <tr>
             <th class="me-5"scope="col">Nr.</th>
@@ -15,22 +15,16 @@
     <tbody>
         @foreach ($articles as $article)
             <tr>
-                <th class="mx-3" scope="row">{{ $article->id }}</th>
-                <td class=" mx-3">{{ $article->title }}</td>
-                <td class=" mx-3">{{ Str::limit($article->subtitle,100) }}</td>
-                <td class="mx-33"> {{ $article->category->name ?? 'Nessuna categoria' }}
-                    {{-- <p>
-                    @if ($article->category)
-                        <a href="{{ route('Article.byCategory', $article->category) }}"
-                            class="btn btn-dark">{{ $article->category->name }}</a>
-                    @else
-                        <p>Nessuna Categoria</p>
-                    @endif --}}
+                <th scope="row">{{ $article->id }}</th>
+                <td>{{ Str::limit($article->title,30) }}</td>
+                <td>{{ Str::limit($article->subtitle,50) }}</td>
+                <td> {{ $article->category->name ?? 'Nessuna categoria' }}
+                    
                 </td>
 
                 <td>
                     @foreach ($article->tags as $tag)
-                        #{{ Str::limit($tag->name,90)}}
+                        #{{ Str::limit($tag->name,10)}}
                     @endforeach
                 </td>
                 <td>{{$article->created_at->format('d/m/y')}}</td>

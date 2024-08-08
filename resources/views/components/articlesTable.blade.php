@@ -1,7 +1,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Nr.</th>
+            <th class="me-5" scope="col">Nr.</th>
             <th scope="col">Titolo</th>
             <th scope="col">Sottotitolo</th>
             <th scope="col">Genere</th>

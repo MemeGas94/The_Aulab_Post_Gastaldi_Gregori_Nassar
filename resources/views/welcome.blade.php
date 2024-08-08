@@ -81,18 +81,11 @@
             <div class="col-12 d-flex justify-content-evenly">
 
                 @foreach ($articles as $article)
-                    <div class="card mb-5" style="width: 18rem;">
-                        <img src="{{ Storage::url($article->cover) }}" class="img-card-custom" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">{{ $article->title }}</h5>
-                            <p class="card-text text-center">{{ Str::limit($article->description,20) }}</p>
-                            <div class="d-flex justify-content-center">
+                <div class="col-12 col-md-4  ">
+                    <x-card :article="$article" />
 
-                                <a href="{{ route('Article.show', $article) }}" class="btn btn-dark">Mostra Articolo</a>
 
-                            </div>
-                        </div>
-                    </div>
+                </div>
                 @endforeach
 
 

@@ -10,21 +10,24 @@
 
         <div class="row justify-content-evenly border-custom mb-5">
 
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-md-10">
+                
+                
+                <h2 class="text-center my-5">{{ $article->title }}</h2>
+                <hr>
+                <h6 class="card-text text-center">{{ $article->subtitle }}</h6>
+                <hr>
                 <img class="img-fluid my-5" src="{{ Storage::url($article->cover) }}" alt="...">
+                <hr>
                 <p class="text-center">
                     @foreach ($article->tags as $tag)
                         #{{ $tag->name }}
                     @endforeach
                 </p>
-            </div>
-
-            <div class="col-12 col-md-5 d-flex flex-column justify-content-around">
-
-                <h3 class="text-center display-5 my-3">{{ $article->title }}</h3>
-
-                <h4 class="card-text text-center">{{ $article->subtitle }}</h4>
-                <p class="card-text text-center mb-3">{{ $article->description }}</p>
+                <hr>
+                
+                <p class="card-text text-center mb-5">{{ $article->description }}</p>
+                
             </div>
         </div>
     

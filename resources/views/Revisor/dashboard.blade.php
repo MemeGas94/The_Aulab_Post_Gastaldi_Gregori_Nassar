@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 border-custom my-4">
-                <h3>Articoli da revisionare</h3>
+                <h3 class="text-center">Articoli da revisionare</h3>
                 <x-articlesTable :articles="$unrevisionArticles"/>
                
             </div>
@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 border-custom my-4">
-                <h3>Articoli accettati</h3>
+                <h3 class="text-center">Articoli accettati</h3>
                 <x-articlesTable :articles="$acceptedArticles"/>
                
             </div>
@@ -37,7 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 border-custom my-4">
-                <h3>Articoli Respinti</h3>
+                <h3 class="text-center">Articoli Respinti</h3>
                 <x-articlesTable :articles="$rejectedArticles"/>
                
             </div>

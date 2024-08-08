@@ -34,14 +34,14 @@
                         <form class="col-12 col-md-6 d-flex justify-content-center my-3" method="POST" action="{{ route('Revisor.accepted', $article) }}">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-success" type="submit">Accetta articolo</button>
+                            <button class="btn btn-dark text-success" type="submit">Accetta articolo</button>
                         </form>
                         
                         
                         <form class="col-12 col-md-6 d-flex justify-content-center my-3" method="POST" action="{{ route('Revisor.rejected', $article) }}">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-danger" type="submit">Rifiuta articolo</button>
+                            <button class="btn btn-dark text-danger" type="submit">Rifiuta articolo</button>
                         </form>
                     
                         

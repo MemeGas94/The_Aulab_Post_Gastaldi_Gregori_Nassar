@@ -102,7 +102,7 @@
                     @enderror
 
                     <div class="bottom-text">
-                        <button class="btn button my-1" type="submit">Aggiorna articolo</button>
+                        <button class="btn button btn-dark my-1" type="submit">Aggiorna articolo</button>
                     </div>
                 </form>
 

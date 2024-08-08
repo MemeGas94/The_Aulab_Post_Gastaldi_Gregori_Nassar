@@ -1,23 +1,28 @@
 <x-layout>
-    <div class="container my-5 login">
+    <div class="container my-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
+
                 <form method="POST" action="{{ route('postcareer') }}" class="login-form">
                     @csrf
                     
                     <div class="mb-3">
-                        <label for="email" class="form-label text-center p-3 text-dark">Email</label>
-                        <input type="email" value="{{ Auth::user()->email }}" aria-describedby="emailHelp" class="form-control w-100" id="email" name="email">
+                        <label for="email" class="form-label text-center p-3 text-dark ">Email</label>
+                        <input type="email" value="{{ Auth::user()->email }}" class="form-control @error('email') is-invalid @enderror" id="email" name="email">
                     </div>                                   
                     @error('email')
+                    <span class="text-danger">
                         {{ $message }}
+                    </span>
                     @enderror
 
                     <div class="mb-3">
-                        <label for="description" class="form-label p-3 text-dark">Messaggio di presentazione</label>
-                        <textarea type="text" class="form-control w-100" id="messagge-presentation" name="text"></textarea>
+                        <label for="description" class="form-label p-3 text-dark ">Messaggio di presentazione</label>
+                        <textarea type="text" class="form-control w-100 @error('text') is-invalid @enderror" id="text" name="text"></textarea>
                         @error('text')
-                        {{ $message }}
+                        <span class="text-danger">
+                            {{ $message }}
+                        </span>
                     @enderror
                 </div>
                 
@@ -33,6 +38,8 @@
                         <button class="btn button my-3" type="submit">Candidati</button>
                     </div>
                 </form>
+
+
             </div>
         </div>
     </div>

@@ -16,7 +16,11 @@
                 <th scope="row">{{ $article->id }}</th>
                 <td>{{ $article->title }}</td>
                 <td>{{ $article->subtitle }}</td>
+                @if ($article->category)
                 <td>{{ $article->category->name }}</td>
+                @else
+                <td>Nessuna Categoria</td>
+                @endif
                 <td>
 
                     @if (is_null($article->is_accepted))

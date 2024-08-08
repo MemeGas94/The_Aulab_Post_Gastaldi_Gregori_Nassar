@@ -30,12 +30,12 @@
                 <td>{{$article->created_at->format('d/m/y')}}</td>
                 <td>
                     @if (!is_null($article->is_accepted))
-                        <a href="{{ route('Article.show', $article) }}" class="btn btn-dark ">Leggi</a>
-                        <a href="{{ route('Article.modifyArticle', $article) }}" class="btn btn-dark ">Modifica</a>
+                        <a href="{{ route('Article.show', $article) }}" class="btn btn-success ">Leggi</a>
+                        <a href="{{ route('Article.modifyArticle', $article) }}" class="btn btn-warning ">Modifica</a>
                     <form method="POST" action="{{ route('Article.destroy', $article) }}" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-dark text-danger" type="submit"> Elimina</button>
+                            <button class="btn btn-danger" type="submit"> Elimina</button>
                         </form>
                     @endif
                 </td>

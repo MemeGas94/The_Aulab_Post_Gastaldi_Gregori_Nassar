@@ -1,8 +1,8 @@
 <x-layout>
     
-    <section class="container">
-        <div class="row">
-            <h1 class="text-center display-1">Tutti gli articoli per {{ $query }}</h1>
+    <section class="container my-3">
+        <div class="row home-custom">
+            <h1 class="display-5">Tutti gli articoli per {{ $query }}</h1>
         </div>
     </section>
 

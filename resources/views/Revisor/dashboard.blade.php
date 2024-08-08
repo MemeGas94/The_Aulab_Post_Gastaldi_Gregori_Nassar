@@ -1,9 +1,9 @@
 <x-layout>
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-12 my-5">
+    <section class="container my-3">
+        <div class="row home-custom">
+            <div class="col-12 my-4">
     
-                <h2 class="text-center display-3">Bentornato revisore {{Auth::user()->name}}</h2>
+                <h2 class="display-5 my-4">Bentornato revisore {{Auth::user()->name}}</h2>
     
                 
     

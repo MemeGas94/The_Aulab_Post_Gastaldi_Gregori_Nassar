@@ -1,9 +1,9 @@
 <x-layout>
     <div>
 
-        <section class="container">
-            <div class="row">
-                <h1 class="text-center my-4 ">Tutti gli articoli sul {{ $category->name }}</h1>
+        <section class="container my-3">
+            <div class="row home-custom">
+                <h1 class="my-4 display-5 ">Tutti gli articoli sul {{ $category->name }}</h1>
             </div>
         </section>
 

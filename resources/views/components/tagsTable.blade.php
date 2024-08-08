@@ -22,14 +22,14 @@
                             @csrf
                             @method('PUT')
                             <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control input-custom">
-                            <button class="btn btn-dark text-success ms-1 " type="submit">Aggiorna</button>
+                            <button class="btn btn-success ms-1 " type="submit">Aggiorna</button>
                         </form>
                     </td>
                     <td>
                         <form method="POST" action="{{ route('admin.deleteTag', ['tag' => $tagTable]) }}">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-dark text-danger" type="submit">Elimina</button>
+                            <button class="btn btn-danger" type="submit">Elimina</button>
                         </form>
                     </td>
                 @else
@@ -38,14 +38,14 @@
                             @csrf
                             @method('PUT')
                             <input type="text" value="{{ $tagTable->name }}" name="name" class="form-control input-custom">
-                            <button class="btn btn-dark text-success ms-1" type="submit">Aggiorna</button>
+                            <button class="btn btn-success ms-1" type="submit">Aggiorna</button>
                         </form>
                     </td>
                     <td>
                         <form method="POST" action="{{ route('admin.deleteCategory', ['category' => $tagTable]) }}">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-dark text-danger" type="submit">Elimina </button>
+                            <button class="btn btn-danger" type="submit">Elimina </button>
                         </form>
                     </td>
                 @endif

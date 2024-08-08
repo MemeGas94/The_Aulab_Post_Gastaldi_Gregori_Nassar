@@ -2,9 +2,9 @@
 
 
 
-    <section class="container">
-        <div class="row">
-            <h1 class="text-center my-5 display-3">Ecco l'articolo completo</h1>
+    <section class="container my-3">
+        <div class="row home-custom">
+            <h1 class="my-4 display-5">Ecco l'articolo completo</h1>
             <p> tempo di lettura {{$article->readDuration()}} min</p>
         </div>
 
@@ -17,7 +17,7 @@
                 <hr>
                 <h6 class="card-text text-center">{{ $article->subtitle }}</h6>
                 <hr>
-                <img class="img-fluid my-5" src="{{ Storage::url($article->cover) }}" alt="...">
+                <img class="img-fluid img-custom my-5" src="{{ Storage::url($article->cover) }}" alt="...">
                 <hr>
                 <p class="text-center">
                     @foreach ($article->tags as $tag)
@@ -42,7 +42,7 @@
                             action="{{ route('Revisor.accepted', $article) }}">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-dark text-success" type="submit">Accetta articolo</button>
+                            <button class="btn btn-success" type="submit">Accetta articolo</button>
                         </form>
     
     
@@ -50,7 +50,7 @@
                             action="{{ route('Revisor.rejected', $article) }}">
                             @csrf
                             @method('PATCH')
-                            <button class="btn btn-dark text-danger" type="submit">Rifiuta articolo</button>
+                            <button class="btn btn-danger" type="submit">Rifiuta articolo</button>
                         </form>
                     @endif
                 </div>

@@ -1,9 +1,9 @@
 <x-layout>
 
 
-    <section class="container">
-        <div class="row">
-            <h1 class="text-center my-4">Ultimi articoli aggiornati</h1>
+    <section class="container my-3">
+        <div class="row home-custom">
+            <h1 class="my-4 display-5">Ultimi articoli aggiornati</h1>
         </div>
         <div class="row">
 

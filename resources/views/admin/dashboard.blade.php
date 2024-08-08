@@ -8,11 +8,11 @@
     
 
     
-    <section class="container-fluid">
-        <div class="row">
-            <div class="col-12">
+    <section class="container my-3">
+        <div class="row home-custom">
+            <div class="col-12 my-4">
 
-                <h2 class="text-center my-5 display-3">Bentornato {{ Auth::user()->name }} !</h2>
+                <h2 class="my-4 display-5">Bentornato {{ Auth::user()->name }} !</h2>
 
 
 
@@ -79,9 +79,9 @@
             </div>
 
             <div class="col-12 border-custom my-5">
-                {{-- @if (Auth::user()->category) --}}
+                
                 <x-tagsTable :tagTables="$categories" metaType="categorie" />
-                {{-- @endif --}}
+               
             </div>
 
         </div>

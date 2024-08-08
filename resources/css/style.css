@@ -1,5 +1,5 @@
 body {
-  background-color: #bcb3ec;
+  background-color: #bab3ecb7;
   font-family: "Ysabeau SC", sans-serif;
   
 }
@@ -169,6 +169,7 @@ button:hover {
 
 .navbar {
   background-color: #000000;
+  border-bottom: 2px solid #bcb3ec;
 
 }
 
@@ -370,8 +371,9 @@ video{
 }
 
 .card{
-  background-color: #bcb3ec;
-  border: 4px solid black;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -411,14 +413,35 @@ input:required{
   color: red;
 }
 
-.border-custom{
-  border: 4px solid black;
-  border-radius: 20px;
 
-}
 
 .input-custom{
   width: 75%;
   margin-right: 15px;
 } 
 
+.btn-custom{
+  border: 3px solid  #bcb3ec  ;
+}
+
+.btn-custom:hover{
+  background: #bcb3ec;
+  color: black ;
+}
+
+.body-custom{
+  background-color: rgb(240,240,240);
+  border-radius: 15px ;
+  padding: 10px;
+}
+
+.home-custom{
+  border-bottom: 1px solid black;
+}
+
+
+.img-custom{
+  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid gray;
+}

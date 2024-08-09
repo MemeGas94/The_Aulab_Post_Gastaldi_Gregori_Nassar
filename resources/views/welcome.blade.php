@@ -1,7 +1,12 @@
 <x-layout>
     @if (session('sessionn'))
+    <div class="alert alert-success">
+        {{ session('sessionn') }}
+    </div>
+    @endif
+    @if (session('session'))
         <div class="alert alert-success">
-            {{ session('sessionn') }}
+            {{ session('session')  }}
         </div>
     @endif
 
@@ -23,11 +28,6 @@
     </div>
 
 
-    @if (session('session'))
-        <div class="alert alert-success">
-            {{ session('session')  }}
-        </div>
-    @endif
 
 
     @if (session('alert'))

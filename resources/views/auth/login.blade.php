@@ -13,6 +13,7 @@
                         <input type="email" class="form-control w-100" id="email" name="email">
                     </div>
                     @error('email')
+                    <span class="text-danger">
                         {{ $message }}
                     @enderror
                     <div>
@@ -29,6 +30,7 @@
                         
                     </div>
                     @error('password')
+                    <span class="text-danger">
                         {{ $message }}
                     @enderror
                 </form>

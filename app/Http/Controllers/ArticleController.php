@@ -107,7 +107,7 @@ class ArticleController extends Controller
 
         $request->validate([
             'title' => 'required|min:5|unique:articles,title,' . $article->id,
-            'subtitle' => 'required|min:5',
+            'subtitle' => 'required|min:5|max:5000',
             'description' => 'required|min:10|max:5000',
             'cover' => 'image',
             'category' => 'required',
